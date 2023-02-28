@@ -16,24 +16,24 @@
         "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\nav_header_main_cust.xml"
     },
     {
-        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_menu.png.flat",
-        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\drawable-xhdpi\\ic_menu.png"
-    },
-    {
         "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_biker.png.flat",
         "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\drawable\\icon_biker.png"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_menu.png.flat",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\drawable-xhdpi\\ic_menu.png"
     },
     {
         "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons_location_marker_blue.png.flat",
         "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\drawable\\icons_location_marker_blue.png"
     },
     {
-        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_visa.xml.flat",
-        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\drawable\\ic_visa.xml"
-    },
-    {
         "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_man.png.flat",
         "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\mipmap-mdpi\\man.png"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_visa.xml.flat",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\drawable\\ic_visa.xml"
     },
     {
         "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_duong_vien_goc_tron_so_luong.xml.flat",

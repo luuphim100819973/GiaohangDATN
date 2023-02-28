@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/id_request_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="58dp"
+        android:text="Tìm tài xế" />
+    <Button
+        android:id="@+id/history_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="108dp"
+        android:backgroundTint="#673AB7"
+        android:text="Lịch sử"
+        android:textColor="#EFE6E6" />
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="52dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <include
+            android:id="@+id/main_page_toolbar_customer"
+            layout="@layout/app_bar_layout_cust" />
+    </RelativeLayout>
+    <!--android:tint="@color/black" />-->
+    <!--android:id="@+id/bottomSheet"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!--android:id="@+id/container_card"-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginRight="-20dp"
+            android:layout_marginBottom="-30dp"
+            app:cardElevation="20dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/driverInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:background="@android:color/white"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingLeft="10sp"
+                android:paddingTop="5sp"
+                android:paddingRight="20sp"
+                android:paddingBottom="30sp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/driverProfileImage"
+                            android:layout_width="100sp"
+                            android:layout_height="100sp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10sp"
+                            android:padding="10sp"
+                            android:src="@mipmap/ic_default_user" />
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            app:cardCornerRadius="10sp"
+                            app:cardElevation="4dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:id="@+id/ratingText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/ic_star_black_24dp"
+                                android:drawablePadding="10sp"
+                                android:gravity="center"
+                                android:paddingLeft="10sp"
+                                android:paddingTop="5sp"
+                                android:paddingRight="10sp"
+                                android:paddingBottom="5sp"
+                                android:text="@string/double_dash"
+                                android:textColor="@color/black" />
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15sp">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/show_drivers_loc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="5sp"
+                            android:src="@drawable/car"
+                            android:text="@string/double_dash"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            tools:srcCompat="@drawable/ic_baseline_drive_eta_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15sp">
+
+                        <TextView
+                            android:id="@+id/driverPlate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5sp"
+                            android:text="@string/double_dash"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/driverCar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:paddingBottom="5sp"
+                            android:text="@string/double_dash"
+                            android:textColor="@color/grey" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="0sp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/message_from_cus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:backgroundTint="@color/lighterGrey"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:elevation="0dp"
+                        android:src="@drawable/ic_baseline_message_24"
+                        android:text="message"
+                        android:textColor="@android:color/white"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp" />
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/phone_to_driver_from_cus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:backgroundTint="@color/lighterGrey"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:elevation="0dp"
+                        android:src="@drawable/ic_call_black_24dp"
+                        android:text="@string/phone_driver"
+                        android:textColor="@android:color/white"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp" />
+
+                    <TextView
+                        android:id="@+id/driverName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingBottom="5sp"
+                        android:text="@string/double_dash"
+                        android:textColor="@color/colorAccentDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/lighterGrey"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:elevation="0dp"
+                        android:src="@drawable/ic_cancel_black_24dp"
+                        android:text="@string/phone_driver"
+                        android:textColor="@android:color/white"
+                        app:borderWidth="0dp"
+                        app:elevation="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/drawerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="362dp"
+        android:paddingLeft="20sp"
+        android:paddingTop="15sp"
+        android:paddingRight="20sp"
+        android:paddingBottom="10sp"
+        android:src="@drawable/ic_menu"
+        app:tint="@color/white" />
+
+
+</FrameLayout>
+

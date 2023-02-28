@@ -58,30 +58,6 @@ public class RideObject  implements Cloneable{
     }
     public RideObject(){}
 
-    /**
-     * Checks user can place a ride request?
-     * return -1 nếu ko thể, 0 nếu nguwojc lại
-     */
-    public int checkRide(){
-        if (current == null) {
-            Toast.makeText(activity.getApplicationContext(), "Can't get location", Toast.LENGTH_SHORT).show();
-            return -1;
-        }
-        if (destination == null) {
-            Toast.makeText(activity.getApplicationContext(), "Please pick a destination", Toast.LENGTH_SHORT).show();
-            return -1;
-        }
-        if (pickup == null) {
-            Toast.makeText(activity.getApplicationContext(), "Please pick a pickup point", Toast.LENGTH_SHORT).show();
-            return -1;
-        }
-
-        return 0;
-    }
-    /**
-     * Đưa Datasnapshot vào RideObject
-     * biến dataSnapshot - datasnapshot of the ride
-     */
     public void parseData(DataSnapshot dataSnapshot){
         id = dataSnapshot.getKey();
         pickup = new LocationObject();
@@ -169,48 +145,6 @@ public class RideObject  implements Cloneable{
         }
     }
     /**
-     * Post Ride info vào database
-     * firebase functions khởi động phương thức này và chỉ hiện thị với drivers.
-     */
-    public void postRideInfo(){
-        rideRef = FirebaseDatabase.getInstance(database_name).getReference().child("ride_info");
-     //   rideRef2 = FirebaseDatabase.getInstance(database_name).getReference().child("history");
-        id =  rideRef.push().getKey();
-        String customerId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        HashMap map = new HashMap();
-       // map.put("service", requestService);
-        map.put("state", 0);
-        map.put("customerId", customerId);
-        map.put("ended", false);
-      //  map.put("calculated_duration", duration);
-      //  map.put("calculated_distance", distance);
-     //   map.put("calculated_Price", Utils.rideCostEstimate(distance, duration));
-        map.put("rating_calculated", false);
-        map.put("rating", -1);
-        map.put("creation_timestamp", ServerValue.TIMESTAMP);
-      //  map.put("destination/name", destination.getName());
-    //    map.put("destination/lat", destination.getCoordinates().latitude);
-     //   map.put("destination/lng", destination.getCoordinates().longitude);
-     //   map.put("pickup/name", pickup.getName());
-      //  map.put("pickup/lat", pickup.getCoordinates().latitude);
-     //   map.put("pickup/lng", pickup.getCoordinates().longitude);
-        rideRef.child(id).updateChildren(map);
-
-
-    }
-
-
-    /**
-     * Khi tài xế đã nhận đơn, phương thức này được gọi để biết trạng thái của chuyến đi
-     */
-    public void pickedCustomer(){
-        DatabaseReference ref = FirebaseDatabase.getInstance(database_name).getReference().child("ride_info").child(id);
-        HashMap map = new HashMap();
-        map.put("state", 2);
-        map.put("timestamp_picked_customer", ServerValue.TIMESTAMP);
-        ref.updateChildren(map);
-    }
-    /**
      * timestamp
      */
     public String getDate() {
@@ -220,57 +154,7 @@ public class RideObject  implements Cloneable{
         String date = DateFormat.format("MM-dd-yyyy, hh:mm", cal).toString();
         return date;
     }
-    /**
-     * Được gọi khi driver muốn hủy customer request
-     */
-    public void cancelRide(){
-        if(id == null){return;}
-        DatabaseReference ref = FirebaseDatabase.getInstance(database_name).getReference().child("ride_info").child(id);
-        HashMap map = new HashMap();
-        map.put("state", -1);
-        map.put("cancelled", true);
-        ref.updateChildren(map);
-    }
-    /**
-     * Được gọi khi driver muốn nhận customer request
-     */
-    public void confirmDriver(){
-        HashMap map = new HashMap();
-        map.put("state", 1);
-        map.put("driverId", FirebaseAuth.getInstance().getCurrentUser().getUid());
-        this.rideRef.updateChildren(map);
-    }
-    /**
-     * Hiện dialog  sau khi hoàn thành để customer đánh giá
-     */
-    public void showDialog(Activity activity) {
-        try {
-            RideObject mTempRide = (RideObject) this.clone();
-            final Dialog dialog = new Dialog(activity);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
-                    WindowManager.LayoutParams.MATCH_PARENT);
-            dialog.setCancelable(false);
-            dialog.setContentView(R.layout.dialog_ride_review);
-            Button mConfirm = dialog.findViewById(R.id.confirm);
-            RatingBar mRate = dialog.findViewById(R.id.rate);
-            TextView mName = dialog.findViewById(R.id.name);;
-            ImageView mImage = dialog.findViewById(R.id.image);
-            mName.setText(mTempRide.getDriver().getNameDash());
-            if (!mDriver.getProfileImage().equals("default"))
-                Glide.with(activity).load(mDriver.getProfileImage()).apply(RequestOptions.circleCropTransform()).into(mImage);
-            mConfirm.setOnClickListener(view -> {
-                if (mRate.getNumStars() == 0) {
-                    return;
-                }
-                mTempRide.getRideRef().child("rating").setValue(mRate.getRating());
-                dialog.dismiss();
-            });
-            dialog.show();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-    }
+
     public DriverObject getDriver() {
         return mDriver;
     }
@@ -383,13 +267,7 @@ public class RideObject  implements Cloneable{
     public void setDuration(double duration) {
         this.duration = duration;
     }
-    public String getDurationString(){
-        int days = (int) duration / 86400;
-        int hours = ((int) duration - days * 86400) / 3600;
-        int minutes = ((int) duration - days * 86400 - hours * 3600) / 60;
-        int seconds = (int) duration - days * 86400 - hours * 3600 - minutes * 60;
-        return hours + " hour " + minutes + "min";
-    }
+
     public double getEstimatedPrice() {
         return estimatedPrice;
     }

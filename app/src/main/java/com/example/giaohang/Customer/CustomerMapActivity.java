@@ -117,8 +117,8 @@ import java.util.Map;
  * màn hình chính cho customer
  */
 public class CustomerMapActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback,
-        DirectionCallback {
+        implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback
+        {
     int TIMEOUT_MILLISECONDS = 20000,
             CANCEL_OPTION_MILLISECONDS = 10000;
     private GoogleMap mMap;
@@ -140,15 +140,10 @@ public class CustomerMapActivity extends AppCompatActivity
     private TextView mDriverCar;
     private TextView mDriverLicense;
     private TextView mRatingText;
-    private TextView autocompleteFragmentTo;
-    private TextView autocompleteFragmentFrom;
     //thu hoi request
     private Boolean requestBool=false;
     FloatingActionButton mCallDriver, mMessage;
     FloatingActionButton mCancel;
-    FloatingActionButton mCancelTimeout;
-    FloatingActionButton mCurrentLocation;
-
 
     double lat1;
     double long1;
@@ -158,7 +153,7 @@ public class CustomerMapActivity extends AppCompatActivity
     ArrayList<TypeObject> typeArrayList = new ArrayList<>();
     private Boolean driverFound = false;
     private ValueEventListener driveHasEndedRefListener;
-    Handler cancelHandler, timeoutHandler;
+
     private Marker maker_pick_me_here_cust_map;
     public String database= "https://delivery-b9821-default-rtdb.asia-southeast1.firebasedatabase.app";
     private FloatingActionButton Image_Show_Driver_Map;
@@ -170,8 +165,7 @@ public class CustomerMapActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_customer);
-        /*Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+
         Toolbar toolbar = findViewById(R.id.main_page_toolbar_customer);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
@@ -204,22 +198,13 @@ public class CustomerMapActivity extends AppCompatActivity
         mRatingText = findViewById(R.id.ratingText);
         mLogout = findViewById(R.id.logout_cust);
         mHistory_navigation_fake_cust = findViewById(R.id.history_navigation_fake_cust);
-       // thay doi 21.2
-      //  mRequest = findViewById(R.id.request);
         mCancel = findViewById(R.id.cancel);
-      //  mCancelTimeout = findViewById(R.id.cancel_looking);
         mLogout.setOnClickListener(v -> logOut());
         mHistory_navigation_fake_cust.setOnClickListener(view -> {
             Intent intent= new Intent(CustomerMapActivity.this, HistoryActivity2.class);
             intent.putExtra("customerOrDriver","Customers");
             startActivity(intent);
 
-        });
-       // mRequest.setOnSlideCompleteListener(v -> startRideRequest());
-        mCancel.setOnClickListener(v -> {
-            bottomSheetStatus = 0;
-            mCurrentRide.cancelRide();
-            //endRide();
         });
         mRequestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -265,12 +250,9 @@ public class CustomerMapActivity extends AppCompatActivity
         });
         ImageView mDrawerButton = findViewById(R.id.drawerButton);
         mDrawerButton.setOnClickListener(v -> drawer.openDrawer(Gravity.LEFT));
-        isRequestInProgress();
+
         getHasRideEnded2();
         getHasRideEnded4();
-    }
-    private interface FirebaseCallback {
-        void onCallBack(String list);
     }
     private int radius=1;
     private Boolean driverFound_cust=false;
@@ -278,8 +260,6 @@ public class CustomerMapActivity extends AppCompatActivity
     DatabaseReference driverLocation;
     GeoQuery geoQuery;
     private void getCloserDriver() {
-        /*DatabaseReference driverLocation=FirebaseDatabase.getInstance(database).getReference()
-                .child("driverAvailable");*/
         driverLocation=FirebaseDatabase.getInstance(database).getReference()
                 .child("driversWorking");
         GeoFire geoFire=new GeoFire(driverLocation);
@@ -369,115 +349,15 @@ public class CustomerMapActivity extends AppCompatActivity
         List<Address> addressList = geocoder.getFromLocationName(userInput, 3);
         Address address= null ;
         if (addressList.size() > 0) {
-
             address = addressList.get(0);
             double lat1 = address.getLatitude();
             double long1 = address.getLongitude();
             List<Address> addresses = geocoder.getFromLocation(address.getLatitude(), address.getLongitude(), 1);
             String address3 = addresses.get(0).getAddressLine(0);
             //   mLocationStop.setText(address3);
-
         }
         return address;
-
     }
-    /*private void getDriverInfoAgainHandPick(){
-        String uid=FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference mCustomerDatabase1 = FirebaseDatabase.getInstance(database).getReference()
-                .child("Users").child("Customer").child(uid).child("DriverId");
-        ValueEventListener va=mCustomerDatabase1.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    String id=snapshot.getValue().toString();
-                    DatabaseReference mCustomerDatabase = FirebaseDatabase.getInstance(database).getReference()
-                            .child("Users").child("Drivers").child(id);
-                    mCustomerDatabase.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NotNull DataSnapshot dataSnapshot) {
-                            if (dataSnapshot.exists()) {
-                                String name_chat=dataSnapshot.child("name").getValue().toString();
-                                mMessage.setOnClickListener(view -> {
-
-                                    Intent intent=new Intent(CustomerMapActivity.this, ChatActivity.class);
-                                    Bundle extras = new Bundle();
-                                    extras.putString("customerOrDriver","Customers");
-                                    extras.putString("user_id_chat",driverFoundId_cust);
-                                    extras.putString("user_name",name_chat);
-
-                                    intent.putExtras(extras);
-                                    startActivity(intent);
-                                });
-                                String token_id = dataSnapshot.child("token_id").getValue().toString();
-                     *//*FCMsend.FirebaseMessagingService(DriverMapActivity.this,
-                            token_id, "New Order", uId);*//*
-
-                                //if (dataSnapshot.exists() && dataSnapshot.getChildrenCount()>0) {
-                                Map<String,Object> map =(Map<String, Object>) dataSnapshot.getValue();
-                                if(map.get("name")!= null){
-                                    mDriverName.setText(map.get("name").toString());
-                                }
-                                if(map.get("car")!= null){
-                                    mDriverCar.setText(map.get("car").toString());
-                                }
-                                //mDriverCar.setText(map.get("car").toString());
-                                mCallDriver.setOnClickListener(view -> {
-                                    if (map.get("phone")== null) {
-                                        Snackbar.make(findViewById(R.id.drawer_layout), getString(R.string.driver_no_phone), Snackbar.LENGTH_LONG).show();
-                                    }
-                                    if(map.get("phone")!= null){
-                                        if (ContextCompat.checkSelfPermission(CustomerMapActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-                                            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + map.get("phone").toString()));
-                                            startActivity(intent);
-                                        }
-                                    }
-
-                                });
-
-                                if(map.get("lincense")!= null){
-                                    mDriverLicense.setText(map.get("license").toString());
-                                }
-                                if(dataSnapshot.child("profileImageUrl")!=null){
-                                    Glide.with(getApplication())
-                                            .load(dataSnapshot.child("profileImageUrl").getValue().toString())
-                                            .apply(RequestOptions.circleCropTransform())
-                                            .into(mDriverProfileImage);
-
-                                }
-                                int ratingSum = 0;
-                                float ratingsTotal = 0;
-                                float ratingsAvg =0;
-                                for (DataSnapshot child : dataSnapshot.child("rating").getChildren()) {
-                                    ratingSum = ratingSum + Integer.valueOf(child.getValue().toString());
-                                    ratingsTotal++;
-                                }
-                                if(ratingsTotal!=0){
-                                    ratingsAvg=ratingSum/ratingsTotal;
-                                }
-                                DecimalFormat df = new DecimalFormat("#.#");
-                                df.format(ratingsAvg);
-                                mRatingText.setText(String.valueOf(ratingsAvg));
-                            }
-                            mDriverInfo.setVisibility(View.VISIBLE);
-
-                        }
-
-                        @Override
-                        public void onCancelled(@NotNull DatabaseError databaseError) {
-                        }
-                    });
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-    }*/
-
     private void getDriverInfo2() {
     }
     private Marker mDriverMarker2;
@@ -519,9 +399,6 @@ public class CustomerMapActivity extends AppCompatActivity
                         intent.putExtra("id_driver_working",driverFoundId_cust);
                         CustomerMapActivity.this.startActivity(intent);
                     });
-                 //   mDriverMarker2= mMap.addMarker(new MarkerOptions().position(driverLatLng).title("your driver is here"));
-                   /* mDriverMarker = mMap.addMarker(new MarkerOptions().position(driverLatLng)
-                            .title("your driver").icon(BitmapDescriptorFactory.fromResource(R.drawable.car)))*/;
                 }
             }
             @Override
@@ -532,7 +409,7 @@ public class CustomerMapActivity extends AppCompatActivity
     }
 
      // Khởi tạo recycleview hiển thị cho customer loại car,bike
-    private void initRecyclerView() {
+   /* private void initRecyclerView() {
         typeArrayList = Utils.getTypeList(CustomerMapActivity.this);
         RecyclerView mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setNestedScrollingEnabled(false);
@@ -541,7 +418,7 @@ public class CustomerMapActivity extends AppCompatActivity
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new TypeAdapter(typeArrayList, CustomerMapActivity.this, routeData);
         mRecyclerView.setAdapter(mAdapter);
-    }
+    }*/
     private DatabaseReference driveHasEndedRef;
     private DatabaseReference check1Ref;
     ValueEventListener check1RefListerner;
@@ -716,27 +593,7 @@ public class CustomerMapActivity extends AppCompatActivity
             }
         });
 
-        /*String driverId=FirebaseAuth.getInstance().getCurrentUser().getUid();
-        driveHasEndedRef= FirebaseDatabase.getInstance(database).getReference()
-                .child("Users").child("Drivers").child(driverFoundId_cust).child("customerRequest").child("customerRideId");
-        driveHasEndedRefListener=driveHasEndedRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                } else {
-                    endRide2();
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });*/
-    }
 
-
-     //Khởi tạo Places google api. customer chọn nơi và có thể gọi driver
-
-    void initPlacesAutocomplete() {
     }
     /**
      * Lấy user info và đổ vào navigation
@@ -766,106 +623,6 @@ public class CustomerMapActivity extends AppCompatActivity
         });
     }
 
-    /**
-     * Kiểm tra request
-     * Nhìn vào last ride_ìno xem customer hiện tại có ở đó ko, nếu last ride vẫn đang tiếp tục
-     */
-
-    private void isRequestInProgress() {
-        FirebaseDatabase.getInstance(database).getReference().child("ride_info")
-                .orderByChild("customerId").equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid()).limitToLast(1)
-                .addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NotNull DataSnapshot dataSnapshot) {
-                if (!dataSnapshot.exists()) {
-                    return;
-                }
-                for (DataSnapshot mData : dataSnapshot.getChildren()) {
-                    mCurrentRide = new RideObject();
-                    mCurrentRide.parseData(mData);
-                    if (mCurrentRide.getCancelled() || mCurrentRide.getEnded()) {
-                        mCurrentRide = new RideObject();
-                        return;
-                    }
-                    if (mCurrentRide.getDriver() == null) {
-                        //thay doi 21.2
-                       // mTimeout.setVisibility(View.VISIBLE);
-                        bottomSheetStatus = 2;
-                    } else {
-                        bottomSheetStatus = 3;
-                    }
-                   // bringBottomSheetDown();
-                   // requestListener();
-                }
-            }
-            @Override
-            public void onCancelled(@NotNull DatabaseError databaseError) {
-            }
-        });
-    }
-
-
-    /**
-     * Nghe request hiện tại
-     */
-    /*private void requestListener() {
-        if (mCurrentRide == null) {
-            return;
-        }
-        driveHasEndedRefListener = mCurrentRide.getRideRef().addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NotNull DataSnapshot dataSnapshot) {
-                if (!dataSnapshot.exists()) {
-                    return;
-                }
-                RideObject mRide = new RideObject();
-                mRide.parseData(dataSnapshot);
-
-                if (mRide.getCancelled() || mRide.getEnded()) {
-                    if (!mCurrentRide.getEnded() && mRide.getEnded()) {
-                        mCurrentRide.showDialog(CustomerMapActivity.this);
-                    }
-                    cancelHandler.removeCallbacksAndMessages(null);
-                    timeoutHandler.removeCallbacksAndMessages(null);
-                    bottomSheetStatus = 0;
-                    //endRide();
-                    if (mRide.getCancelledType() == 11) {
-                        new AlertDialog.Builder(CustomerMapActivity.this)
-                                .setTitle(getResources().getString(R.string.no_default_payment))
-                                .setMessage(getResources().getString(R.string.no_payment_available_message))
-                                .setPositiveButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
-                                .setIcon(R.drawable.ic_cancel_black_24dp)
-                                .show();
-                    }
-                    return;
-                }
-                if (mCurrentRide.getDriver() == null && mRide.getDriver() != null) {
-                    try {
-                        mCurrentRide = (RideObject) mRide.clone();
-                    } catch (CloneNotSupportedException e) {
-                        e.printStackTrace();
-                    }
-                    cancelHandler.removeCallbacksAndMessages(null);
-                    timeoutHandler.removeCallbacksAndMessages(null);
-                    getDriverInfo();
-
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NotNull DatabaseError databaseError) {
-            }
-        });
-    }*/
-
-    /**
-     * update vị trí driver liên tục
-     * dù ta dùng geofire to để đẩy vị trí của tài xế vào database, ta có thể tạo 1
-     * Listener để nhận vị trí 1 cách bình thường
-     * 0 -> Lat
-     * 1 -> Longi
-     */
     private Marker mDriverMarker;
     private DatabaseReference driverLocationRef;
     private ValueEventListener driverLocationRefListener;
@@ -920,9 +677,6 @@ public class CustomerMapActivity extends AppCompatActivity
 
     }
     private void getDriverInfo() {
-        /*if (mCurrentRide == null) {
-            return;
-        }*/
         DatabaseReference mCustomerDatabase = FirebaseDatabase.getInstance(database).getReference()
                 .child("Users").child("Drivers").child(driverFoundId_cust);
         mCustomerDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -994,117 +748,14 @@ public class CustomerMapActivity extends AppCompatActivity
                     mRatingText.setText(String.valueOf(ratingsAvg));
                 }
                 mDriverInfo.setVisibility(View.VISIBLE);
-              //  mLooking.setVisibility(View.GONE);
             }
-              //  FCMsend
-            /*public void onDataChange(@NotNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0) {
-                    mCurrentRide.getDriver().parseData(dataSnapshot);
-                    }
-                    mRatingText.setText(String.valueOf(mCurrentRide.getDriver().getDriverRatingString()));
-                    bringBottomSheetDown();
-                    new SendNotification("You have a customer waiting", "New Ride", mCurrentRide.getDriver().getNotificationKey());
-                }*/
+
 
             @Override
             public void onCancelled(@NotNull DatabaseError databaseError) {
             }
         });
     }
-    /**
-     * Lấy user info
-     */
-    /*private void getDriverInfo() {
-        if (mCurrentRide == null) {
-            return;
-        }
-        DatabaseReference mCustomerDatabase = FirebaseDatabase.getInstance(database).getReference()
-                .child("Users").child("Drivers").child(mCurrentRide.getDriver().getId());
-        mCustomerDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NotNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists() && dataSnapshot.getChildrenCount() > 0) {
-                    mCurrentRide.getDriver().parseData(dataSnapshot);
-                    mDriverName.setText(mCurrentRide.getDriver().getNameDash());
-                    mDriverCar.setText(mCurrentRide.getDriver().getCarDash());
-                    mDriverLicense.setText(mCurrentRide.getDriver().getLicenseDash());
-                    if (mCurrentRide.getDriver().getProfileImage().equals("default")) {
-                        mDriverProfileImage.setImageResource(R.mipmap.ic_default_user);
-                    } else {
-                        Glide.with(getApplication())
-                                .load(mCurrentRide.getDriver().getProfileImage())
-                                .apply(RequestOptions.circleCropTransform())
-                                .into(mDriverProfileImage);
-                    }
-                    mRatingText.setText(String.valueOf(mCurrentRide.getDriver().getDriverRatingString()));
-                    bringBottomSheetDown();
-                    new SendNotification("You have a customer waiting", "New Ride", mCurrentRide.getDriver().getNotificationKey());
-                }
-            }
-            @Override
-            public void onCancelled(@NotNull DatabaseError databaseError) {
-            }
-        });
-    }*/
-    /**
-     * EndRide() loại bỏ tất cae các active listeners,
-     * trả lại default state
-     * xóa các markers
-     */
-    /*private void endRide() {
-        //hủy chuyến
-
-        if (cancelHandler != null) {
-            cancelHandler.removeCallbacksAndMessages(null);
-        }
-        if (timeoutHandler != null) {
-            timeoutHandler.removeCallbacksAndMessages(null);
-        }
-        requestBol = false;
-        if (driverLocationRefListener != null)
-            driverLocationRef.removeEventListener(driverLocationRefListener);
-        if (driveHasEndedRefListener != null && mCurrentRide.getRideRef() != null)
-            mCurrentRide.getRideRef().removeEventListener(driveHasEndedRefListener);
-        if (mCurrentRide != null && driverFound) {
-            DatabaseReference driverRef = FirebaseDatabase.getInstance(database).getReference()
-                    .child("Users").child("Drivers").child(mCurrentRide.getDriver().getId()).child("customerRequest");
-            driverRef.removeValue();
-        }
-        pickupLocation = null;
-        destinationLocation = null;
-
-        driverFound = false;
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference ref = FirebaseDatabase.getInstance(database).getReference("customerRequest");
-        GeoFire geoFire = new GeoFire(ref);
-        geoFire.removeLocation(userId, (key, error) -> {
-        });
-
-        if (destinationMarker != null) {
-            destinationMarker.remove();
-        }
-        if (pickupMarker != null) {
-            pickupMarker.remove();
-        }
-        if (mDriverMarker != null) {
-            mDriverMarker.remove();
-        }
-        mMap.clear();
-      //  mRequest.setText(getString(R.string.call_uber));
-        mDriverName.setText("");
-        mDriverCar.setText(getString(R.string.destination));
-        mDriverProfileImage.setImageResource(R.mipmap.ic_default_user);
-      //  autocompleteFragmentTo.setText(getString(R.string.to));
-       // autocompleteFragmentFrom.setText(getString(R.string.from));
-      //  mCurrentLocation.setImageDrawable(getResources().getDrawable(R.drawable.ic_location_on_grey_24dp));
-        mCurrentRide = new RideObject(CustomerMapActivity.this, null);
-      //  getDriversAround();
-        bringBottomSheetDown();
-        zoomUpdated = false;
-        mAdapter.setSelectedItem(typeArrayList.get(0));
-        mAdapter.notifyDataSetChanged();
-
-    }*/
     private void endRide2() {
         requestBool=false;
         //geoQuery.removeAllListeners();
@@ -1121,12 +772,8 @@ public class CustomerMapActivity extends AppCompatActivity
         if(driverLocationRefListener!=null){
             driverLocationRef.removeEventListener(driverLocationRefListener);
         }
-
-
         if(driverFoundId_cust!= null){
-                        /*DatabaseReference driverRef= FirebaseDatabase.getInstance(database).getReference()
-                                .child("Users").child("Drivers").child(driverFoundId_cust).child("customerRideId");
-                        driverRef.setValue(true);*/
+
             DatabaseReference driverRef= FirebaseDatabase.getInstance(database).getReference()
                     .child("Users").child("Drivers").child(driverFoundId_cust).child("customerRequest");
             driverRef.removeValue();
@@ -1146,10 +793,6 @@ public class CustomerMapActivity extends AppCompatActivity
         getDriversAround2();
         mDriverInfo.setVisibility(View.GONE);
         mDriverInfo.clearAnimation();
-        //thay doi 21.2
-      //  mLocation.setVisibility(View.GONE);
-     //   mLooking.setVisibility(View.GONE);
-        //thay doi 21.2
         mDriverName.setText("");
         mDriverCar.setText("");
         mDriverLicense.setText("");
@@ -1158,14 +801,10 @@ public class CustomerMapActivity extends AppCompatActivity
     }
     /**
      * Tìm và update vị trí user
-     * biến update interval đặt là 1000Ms ,
-     * biến googleMap - Map object
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-       // googleMap.setMapStyle(new MapStyleOptions(getResources()
-        //        .getString(R.string.style_json)));
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(1000);
@@ -1194,33 +833,16 @@ public class CustomerMapActivity extends AppCompatActivity
                         String name1= snapshot.child("name").getValue().toString();
                         String location_start1 = snapshot.child("profileImageUrl").getValue().toString();
 
-                     //   autocompleteFragmentTo.setText(name1);
-                     //   autocompleteFragmentFrom.setText(location_start1);
-                        //    mLocationStop.setText(name1);
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                     }
 
                 });
-
-                /*Intent intent = new Intent(getApplicationContext(), UsersActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);*/
                 return false;
             }
         });
     }
-    /*@Override
-    public void onLocationChanged(@NonNull Location location) {
-        if(getApplicationContext()!= null){
-            mLastLocation =location;
-            LatLng latLng= new LatLng(location.getLatitude(),location.getLongitude());
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-        }
-    }*/
-
     boolean zoomUpdated = false;
     LocationCallback mLocationCallback = new LocationCallback() {
         @Override
@@ -1246,46 +868,10 @@ public class CustomerMapActivity extends AppCompatActivity
             }
         }
     };
-
     /**
-     * Lấy tên của vị trí từ tọa độ
-     */
-    private void fetchLocationName() {
-        /*if (pickupLocation == null) {
-            return;
-        }*/
-        try {
-
-            Geocoder geo = new Geocoder(this.getApplicationContext(), Locale.getDefault());
-            List<Address> addresses = geo
-                    .getFromLocation(currentLocation.getCoordinates().latitude, currentLocation.getCoordinates().longitude, 1);
-            if (addresses.isEmpty()) {
-                autocompleteFragmentFrom.setText(R.string.waiting_for_location);
-            } else {
-                String address =addresses.get(0).getAddressLine(0);
-                autocompleteFragmentFrom.setText(address);
-                /*addresses.size();
-                if (addresses.get(0).getThoroughfare() == null) {
-                    pickupLocation.setName(addresses.get(0).getLocality());
-                } else if (addresses.get(0).getLocality() == null) {
-                    pickupLocation.setName("Unknown Location");
-                } else {
-                    pickupLocation.setName(addresses.get(0).getLocality() + ", " + addresses.get(0).getThoroughfare());
-                }
-                autocompleteFragmentFrom.setText(pickupLocation.getName());*/
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    /**
-     * Yêu cầu permission
      * requestCode -> the number assigned to the request.
      * Mỗi request có 1 request code riêng
      */
-
     private void checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -1473,114 +1059,6 @@ public class CustomerMapActivity extends AppCompatActivity
         });
 
     }
-    /*private void getDriversAround() {
-        if (currentLocation == null) {
-            return;
-        }
-        getDriversAroundStarted = true;
-        DatabaseReference driversLocation = FirebaseDatabase.getInstance(database).getReference().child("driversWorking");
-        GeoFire geoFire = new GeoFire(driversLocation);
-
-        GeoQuery geoQuery = geoFire
-                .queryAtLocation(new GeoLocation(currentLocation.getCoordinates().latitude, currentLocation.getCoordinates().longitude), 10000);
-        geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
-            @Override
-            public void onKeyEntered(String key, GeoLocation location) {
-                if (mCurrentRide != null) {
-                    if (mCurrentRide.getDriver() != null) {
-                        return;
-                    }
-                }
-                for (Marker markerIt : markerList) {
-                    if (markerIt.getTag() == null || key == null) {
-                        continue;
-                    }
-                    if (markerIt.getTag().equals(key))
-                        return;
-                }
-                checkDriverLastUpdated(key);
-                LatLng driverLocation = new LatLng(location.latitude, location.longitude);
-                Marker mDriverMarker = mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.car))
-                        .position(driverLocation).title(key));
-                mDriverMarker.setTag(key);
-                markerList.add(mDriverMarker);
-            }
-            @Override
-            public void onKeyExited(String key) {
-                for (Marker markerIt : markerList) {
-                    if (markerIt.getTag() == null || key == null) {
-                        continue;
-                    }
-                    if (markerIt.getTag().equals(key)) {
-                        markerIt.remove();
-                        markerList.remove(markerIt);
-                        return;
-                    }
-                }
-            }
-            @Override
-            public void onKeyMoved(String key, GeoLocation location) {
-                for (Marker markerIt : markerList) {
-                    if (markerIt.getTag() == null || key == null) {
-                        continue;
-                    }
-                    if (markerIt.getTag().equals(key)) {
-                        markerIt.setPosition(new LatLng(location.latitude, location.longitude));
-                        return;
-                    }
-                }
-                checkDriverLastUpdated(key);
-                LatLng driverLocation = new LatLng(location.latitude, location.longitude);
-                Marker mDriverMarker = mMap.addMarker(new MarkerOptions()
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.car)).position(driverLocation).title(key));
-                mDriverMarker.setTag(key);
-                markerList.add(mDriverMarker);
-            }
-            @Override
-            public void onGeoQueryReady() {
-            }
-            @Override
-            public void onGeoQueryError(DatabaseError error) {
-            }
-        });
-    }*/
-    /**
-     * Kiểm tra xem drivers đc update vị trí hay chưa, nếu kiểm tra hơn x lần
-     * update vị trí tài xế lầ cuối rồi xóa khỏi database.
-     * biến key - id driver
-     */
-    private void checkDriverLastUpdated(String key) {
-        FirebaseDatabase.getInstance(database).getReference()
-                .child("Users")
-                .child("Drivers")
-                .child(key)
-                .addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NotNull DataSnapshot dataSnapshot) {
-                        if (!dataSnapshot.exists()) {
-                            return;
-                        }
-
-                        if (dataSnapshot.child("last_updated").getValue() != null) {
-                            long lastUpdated = Long.parseLong(dataSnapshot.child("last_updated").getValue().toString());
-                            long currentTimestamp = System.currentTimeMillis();
-
-                            if (currentTimestamp - lastUpdated > 10000) {
-                                DatabaseReference ref = FirebaseDatabase.getInstance(database).getReference("driversWorking");
-                                GeoFire geoFire = new GeoFire(ref);
-                                geoFire.removeLocation(dataSnapshot.getKey(), (key1, error) -> {
-                                });
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NotNull DatabaseError databaseError) {
-                    }
-                });
-    }
-
-
     private void logOut() {
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(CustomerMapActivity.this, LauncherActivity.class);
@@ -1588,34 +1066,7 @@ public class CustomerMapActivity extends AppCompatActivity
         finish();
     }
 
-    /**
-     *  Route từ điểm đi tới điểm đén
-     */
-    private void getRouteToMarker() {
-        String serverKey = getResources().getString(R.string.google_maps_key);
-        if (mCurrentRide.getDestination() != null && mCurrentRide.getPickup() != null) {
-            GoogleDirection.withServerKey(serverKey)
-                    .from(mCurrentRide.getDestination().getCoordinates())
-                    .to(mCurrentRide.getPickup().getCoordinates())
-                    .transportMode(TransportMode.DRIVING)
-                    .execute(this);
-        }
-    }
 
-    private List<Polyline> polylines = new ArrayList<>();
-
-    /**
-     * Xóa route polylines khỏi map
-     */
-    private void erasePolylines() {
-        if (polylines == null) {
-            return;
-        }
-        for (Polyline line : polylines) {
-            line.remove();
-        }
-        polylines.clear();
-    }
     /**
      * Show map với marker đi và đến,
      * biến route - route giữa đi và đến
@@ -1627,108 +1078,7 @@ public class CustomerMapActivity extends AppCompatActivity
         mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100));
     }
 
-    /**
-     * Kiếm tra nếu route đc lầy thành công, hiển thị trên mao
-     * biến direction - chỉ dẫn tới điểm đến
-     * biến rawBody   - dữ liệu route
-     */
-    ArrayList<Double> routeData;
-    @Override
-    public void onDirectionSuccess(Direction direction, String rawBody) {
-        if (direction.isOK()) {
-            Route route = direction.getRouteList().get(0);
-            try {
-                JSONObject obj = new JSONObject(rawBody);
-                routeData = parseJson(obj);
-                mAdapter.setData(routeData);
-                mAdapter.notifyDataSetChanged();
-                Log.d("My App", obj.toString());
-            } catch (Throwable ignored) {
-            }
-            destinationMarker = mMap.addMarker(new MarkerOptions().position(destinationLocation.getCoordinates())
-                    .icon(BitmapDescriptorFactory.fromBitmap(generateBitmap(CustomerMapActivity.this,
-                            destinationLocation.getName(),
-                            route.getLegList().get(0).getDuration().getText()))));
-            List<LatLng> directionPositionList = route.getLegList().get(0).getDirectionPoint();
-            MapAnimator.getInstance().animateRoute(mMap, directionPositionList);
-            setCameraWithCoordinationBounds(route);
-        }
-    }
-    /**
-     * Xóa route polylines khỏi map
-     */
-    private void MapAnimator() {
-        if (polylines == null) {
-            return;
-        }
-        for (Polyline line : polylines) {
-            line.remove();
-        }
-        polylines.clear();
-    }
-    @Override
-    public void onDirectionFailure(Throwable t) {
-    }
-    /**
-     * Override onActivityResult(), check request code
-     * do something vs place name and place ID được trả về
-     */
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            LocationObject mLocation;
-            if (currentLocation == null) {
-                Snackbar.make(findViewById(R.id.drawer_layout), "First Activate GPS", Snackbar.LENGTH_LONG).show();
-                return;
-            }
-            Place place = Autocomplete.getPlaceFromIntent(data);
-            mLocation = new LocationObject(place.getLatLng(), place.getName());
-            currentLocation = new LocationObject(new LatLng(currentLocation.getCoordinates().latitude, currentLocation.getCoordinates().longitude), "");
-            if (requestCode == 1) {
-                mMap.clear();
-                destinationLocation = mLocation;
-                destinationMarker = mMap.addMarker(new MarkerOptions()
-                        .icon(BitmapDescriptorFactory.fromBitmap(generateBitmap(
-                                CustomerMapActivity.this, destinationLocation.getName(), null)))
-                        .position(destinationLocation.getCoordinates()));
-                mCurrentRide.setDestination(destinationLocation);
-                autocompleteFragmentTo.setText(destinationLocation.getName());
-                if (pickupLocation != null) {
-                    pickupMarker = mMap.addMarker(new MarkerOptions()
-                            .position(pickupLocation.getCoordinates()).icon(BitmapDescriptorFactory.
-                                    fromBitmap(generateBitmap(CustomerMapActivity.this, pickupLocation.getName(), null))));
-                   // bringBottomSheetDown();
-                }
-            } else if (requestCode == 2) {
-                mMap.clear();
-                pickupLocation = mLocation;
-                pickupMarker = mMap.addMarker(new MarkerOptions().position(pickupLocation.getCoordinates()).icon(BitmapDescriptorFactory
-                        .fromBitmap( generateBitmap(CustomerMapActivity.this, pickupLocation.getName(), null))));
-                mCurrentRide.setPickup(pickupLocation);
-                autocompleteFragmentFrom.setText(pickupLocation.getName());
-                if (destinationLocation != null) {
-                    destinationMarker = mMap.addMarker(new MarkerOptions()
-                            .position(destinationLocation.getCoordinates())
-                            .icon(BitmapDescriptorFactory.fromBitmap(generateBitmap(CustomerMapActivity.this,
-                                    destinationLocation.getName(), null))));
-                   // bringBottomSheetDown();
-                }
-            }
-            MapAnimator();
-            getRouteToMarker();
-             getDriversAround2();
-           // mRequest.setText(getString(R.string.call_uber));
-        } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
-            // TODO: Handle the error.
-            Status status = Autocomplete.getStatusFromIntent(data);
-            assert status.getStatusMessage() != null;
-            Log.i("PLACE_AUTOCOMPLETE", status.getStatusMessage());
-        } else if (resultCode == RESULT_CANCELED) {
-           // initPlacesAutocomplete();
-        }
-        //initPlacesAutocomplete();
-    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

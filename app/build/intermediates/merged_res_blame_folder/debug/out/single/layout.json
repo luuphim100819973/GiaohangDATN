@@ -28,12 +28,12 @@
         "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_map_customer.xml"
     },
     {
-        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_driver_settings.xml",
-        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_driver_settings.xml"
-    },
-    {
         "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_history_single2.xml",
         "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_history_single2.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_driver_settings.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_driver_settings.xml"
     },
     {
         "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_map_driver.xml",

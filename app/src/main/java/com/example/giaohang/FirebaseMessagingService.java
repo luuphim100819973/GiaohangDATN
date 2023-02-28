@@ -91,29 +91,3 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
         super.onMessageReceived(remoteMessage);
     }
 }
-/*public void makeNotification() {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, getChannelId())
-                .setContentTitle("Hi")
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentText("Welcome to Android");
-        // Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        Intent intent = new Intent(this, ReceivingActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(pendingIntent);
-        if (shouldSound && shouldVibrate) {
-            builder.setDefaults(Notification.DEFAULT_ALL);
-        }
-        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(0, builder.build());
-
-    }*/
-    /*private String getChannelId() {
-        if (shouldSound && shouldVibrate) {
-            return "CHANNEL_ID_ALL";
-        } else {
-            return "CHANNEL_ID_NONE";
-        }
-    }*/
-    /*private boolean isOreoOrAbove() {
-        return android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O;
-    }*/

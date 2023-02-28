@@ -144,8 +144,6 @@ public class HistorySingleActivity2 extends AppCompatActivity implements OnMapRe
         });
     }
     private String getDate(long timestamp) {
-        //Long timestamp =System.currentTimeMillis()/1000;
-        // Create a DateFormatter object for displaying date in specified
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
         // milliseconds to date.
         Calendar calendar = Calendar.getInstance(Locale.getDefault());
@@ -155,7 +153,6 @@ public class HistorySingleActivity2 extends AppCompatActivity implements OnMapRe
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap=googleMap;
-       // googleMap.setMapStyle(new MapStyleOptions(getResources()
-         //       .getString(R.string.style_json)));
+
     }
 }

@@ -116,10 +116,8 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
     private ValueEventListener driveHasEndedRefListener;
 
     List<RideObject> requestList = new ArrayList<>();
-    View mBottomSheet;
-    /*View mBottomSheet_handPick;*/
+
     LinearLayout mCustomerInfo_handPicK;
-    //BottomSheetBehavior<View> mBottomSheetBehavior;
     GeoQuery geoQuery;
     boolean started = false;
     boolean zoomUpdated = false;
@@ -158,7 +156,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         getSupportActionBar().setTitle("");
         startService(new Intent(DriverMapActivity.this,onAppKilled.class));
         mCustomerInfo_handPicK = findViewById(R.id.customerInfo_handPicK);
-        polylines = new ArrayList<>();
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -231,11 +228,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         });
 
         mWorkingSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            /*if (!mDriver.getActive()) {
-                Toast.makeText(DriverMapActivity.this, R.string.not_approved, Toast.LENGTH_LONG).show();
-                mWorkingSwitch.setChecked(false);
-                return;
-            }*/
             if (isChecked) {
                 connectDriver();
             } else {
@@ -253,11 +245,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         mReSetMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*checkLocationPermission();
-                mFusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
-                if (mMap != null) {
-                    mMap.setMyLocationEnabled(true);
-                }*/
             }
         });
 
@@ -269,10 +256,8 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                     mRideStatus.setText("Đơn đã hoàn thành");
                     mRideStatus.resetSlider();
                     break;
-                //Driver tren duong den Destinaton
+
                 case 2:
-                    /*if (mCurrentRide != null)
-                        mCurrentRide.recordRide();*/
                     recordRide2();
                     recordIncome();
                     endRide2();
@@ -525,18 +510,8 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                     if(map.get("name")!= null){
                         mCustomerName.setText(map.get("name").toString());
                     }
-                    //String token_id = dataSnapshot.child("token_id").getValue().toString();
-                    /*FCMsend.FirebaseMessagingService(DriverMapActivity.this,
-                            token_id
-                            , "New Order", "Có tài xế đã nhận đơn");*/
                 }
-                /*if (mCurrentRide != null) {
-                    mCurrentRide.getCustomer().parseData(dataSnapshot);
-                    mCustomerName.setText(mCurrentRide.getCustomer().getName());
-                }*/
                 mCustomerInfo.setVisibility(View.VISIBLE);
-                /*mBottomSheetBehavior.setHideable(false);
-                mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);*/
             }
             @Override
             public void onCancelled(@NotNull DatabaseError databaseError) {
@@ -561,19 +536,10 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                         locationLng=Double.parseDouble(map.get(1).toString());
                     }
                     DatabaseReference ref= FirebaseDatabase.getInstance(database_name).getReference().child("customerRequestAgain");
-                  //  GeoFire geoFire=new GeoFire(ref);
-                   // geoFire.setLocation(customerId, new GeoLocation(locationLat,locationLng));
                     GeoFire geoFireWorking = new GeoFire(ref);
                     geoFireWorking.setLocation(customerId, new GeoLocation(locationLat, locationLng), (key, error) -> {
                     });
-                    /*LatLng driverLatLng= new LatLng(locationLat,locationLng);
-                    if(mCustomMaker2 != null){
-                        mCustomMaker2.remove();
-                    }
-                    // mCustomMaker2=mMap.addMarker(new MarkerOptions().position(driverLatLng).title("pick up customer here"));
-                    mCustomMaker2 = mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.mipmap.pin_loca_32))
-                            .position(driverLatLng).title("New Request from"+customerId));
-                    // mMap.addMarker(new MarkerOptions().position(driverLatLng).title("pickup locationn"));*/
+
                 }
             }
             @Override
@@ -700,7 +666,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
     /**
      * lấy user info
      * Check xem user có work hay ko trước khi đóng app
-     * Set radio button "working"
      */
     private void getUserData() {
         String driverId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -732,50 +697,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         });
     }
 
-    /**
-     * Lấy các rider gần nhất với radius of MAX_SEARCH_DISTANCE và vị trí driver hiện tại.
-     * nếu 1 request đc tìm thấy và rider đang ko thực hiện 1 request nào khác thi gọi getRequestInfo(key)
-     * key - id of the request.
-     */
-    private void getRequestsAround() {
-        /*if (mLastLocation == null) {
-            return;
-        }*/
-        DatabaseReference requestLocation = FirebaseDatabase.getInstance(database_name).getReference().child("customerRequest");
-        GeoFire geoFire = new GeoFire(requestLocation);
-        geoQuery = geoFire.queryAtLocation(new GeoLocation(mLastLocation.getLatitude(), mLastLocation.getLongitude()), MAX_SEARCH_DISTANCE);
-        geoQuery.removeAllListeners();
-        geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
-            @Override
-            public void onKeyEntered(String key, GeoLocation location) {
-                if(!mWorkingSwitch.isChecked()){
-                    return;
-                }
-                if (mCurrentRide == null) {
-                    for (RideObject mRideIt : requestList) {
-                        if (mRideIt.getId().equals(key)) {
-                            return;
-                        }
-                    }
-                    //getRequestInfo(key);
-                }else{
-                    requestList.clear();
-                }
-            }
-            @Override
-            public void onKeyExited(String key) {
-            }
-            @Override
-            public void onKeyMoved(String key, GeoLocation location) {
-            }
-            @Override
-            public void onGeoQueryReady() {
-            }
-            @Override
-            public void onGeoQueryError(DatabaseError error) {
-            }
-        });
-    }
     //Loại bỏ các active listeners,
     // return to default state
     // Xóa markers
@@ -877,26 +798,7 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                                     mCustomerInfo_handPicK.setVisibility(View.GONE);
                                     mCustomerInfo_handPicK.clearAnimation();
                                     /**tạo lại nhánh customerRequest như cũ*/
-                                    /*DatabaseReference customerPickupAgain3Ref= FirebaseDatabase.getInstance(database_name).getReference()
-                                            .child("customerRequestAgain").child(id_customer_handPick).child("l");
-                                    customerPickupAgain3Ref.addListenerForSingleValueEvent(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            if(snapshot.exists()&& snapshot.getChildrenCount()>0){
-                                                List<Object> map=(List<Object>) snapshot.getValue();
-                                                double locationLat =0,locationLng=0;
-                                                if(map.get(0)!=null){locationLat=Double.parseDouble(map.get(0).toString());}
-                                                if(map.get(1)!=null){locationLng=Double.parseDouble(map.get(1).toString());}
-                                                String hp=id_customer_handPick;
-                                                DatabaseReference ref= FirebaseDatabase.getInstance(database_name).getReference().child("customerRequest");
-                                                GeoFire geoFireWorking = new GeoFire(ref);
-                                                geoFireWorking.setLocation(hp, new GeoLocation(locationLat, locationLng), (key, error) -> {});
-                                            }
-                                        }
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-                                        }
-                                    });*/
+
                                     /**Tạo lại nhánh customerRequest trong Users/Driver/CustomerRequest*/
 
                                     String this_driver_id=FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -1064,12 +966,10 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                                                         DatabaseReference driverRef_again_request= FirebaseDatabase.getInstance(database_name).getReference()
                                                                     .child("Users").child("Drivers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("customerRequest");
                                                         driverRef_again_request.removeValue();
-                                                        //driverFoundId_cust=null;
+
 
 
                                                         mCustomerInfo_handpickAfter.setVisibility(view.GONE);
-
-                                                        //endRide2();
 
                                                     }
                                                 });
@@ -1086,21 +986,11 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                                             mCustomerInfo.setVisibility(View.GONE);
                                             mCustomerInfo_handpick.setVisibility(View.GONE);
                                             mCustomerInfo_handpickAfter.setVisibility(View.VISIBLE);
-
-                                            //thay doi 24/2
-                                            /*mBottomSheetBehavior.setHideable(false);
-                                            mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);*/
                                         }
                                         @Override
                                         public void onCancelled(@NotNull DatabaseError databaseError) {
                                         }
                                     });
-                                    /**Xóa id ở nhánh CustomeRequestAgain*/
-                                    /*DatabaseReference ref = FirebaseDatabase.getInstance(database_name).getReference("customerRequestAgain");
-                                    GeoFire geoFire = new GeoFire(ref);
-                                    geoFire.removeLocation(id_customer_handPick, (key, error) -> {
-                                    });*/
-
                                 }
                             }
 
@@ -1113,10 +1003,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
 
                     }
                 });
-
-                /*Intent intent = new Intent(getApplicationContext(), UsersActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);*/
                 return false;
             }
         });
@@ -1136,9 +1022,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                     if (!mWorkingSwitch.isChecked()) {
                         geoFireWorking.removeLocation(userId, (key, error) -> {
                         });
-                        /*mCustomerInfo.setVisibility(View.GONE);
-                        mBottomSheetBehavior.setHideable(true);
-                        mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);*/
                         return;
                     }
                     geoFireWorking.setLocation(userId, new GeoLocation(location.getLatitude(), location.getLongitude()), (key, error) -> {
@@ -1147,10 +1030,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                         mCurrentRide.setRideDistance(mCurrentRide.getRideDistance() + mLastLocation.distanceTo(location) / 1000);
                     }
                     mLastLocation = location;
-                    if (!started) {
-                        getRequestsAround();
-                        started = true;
-                    }
                     if (!getAllRequestCustomersAround) {}
                     // cap nhat lien tuc cac map quanh ban
                         getAllRequestCustomersAround();
@@ -1166,25 +1045,8 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
                             mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude())));
                             mMap.animateCamera(CameraUpdateFactory.zoomTo(zoomLevel));
                             zoomUpdated = true;
-                        /*mMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude())));
-                        mMap.animateCamera(CameraUpdateFactory.zoomTo(16));
-                        zoomUpdated = true;*/
                     }
-                    /*String userId2 = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                    DatabaseReference refAvailable2 = FirebaseDatabase.getInstance(database_name).getReference("driversWorking");
-                    DatabaseReference refWorking2 = FirebaseDatabase.getInstance(database_name).getReference("driversAvailable");
-                    GeoFire geoFireAvailable2 = new GeoFire(refAvailable2);
-                    GeoFire geoFireWorking2 = new GeoFire(refWorking2);
-                    switch (customerId){
-                        case "":
-                            geoFireWorking2.removeLocation(userId2);
-                            geoFireAvailable2.setLocation(userId2, new GeoLocation(location.getLatitude(), location.getLongitude()));
-                            break;
 
-                        default:
-                            geoFireAvailable2.removeLocation(userId2);
-                            geoFireWorking2.setLocation(userId2, new GeoLocation(location.getLatitude(), location.getLongitude()));
-                            break;*/
                 }
             }
         }
@@ -1225,12 +1087,6 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         Intent intent = new Intent(DriverMapActivity.this, LauncherActivity.class);
         startActivity(intent);
         finish();
-        /*disconnectDriver();
-      //
-        //  FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(DriverMapActivity.this, LauncherActivity.class);
-        startActivity(intent);
-        finish();*/
     }
      // Connects driver
     private void connectDriver() {
@@ -1247,21 +1103,10 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         if (mFusedLocationClient != null) {
             mFusedLocationClient.removeLocationUpdates(mLocationCallback);
         }
-        /*String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference ref1 = FirebaseDatabase.getInstance(database_name).getReference("driversAvailable").child(userId);
-        DatabaseReference ref = FirebaseDatabase.getInstance(database_name).getReference("driversWorking").child(userId);
-        ref.removeValue();
-        ref1.removeValue();*/
         DatabaseReference refWorking = FirebaseDatabase.getInstance(database_name).getReference("driversWorking");
         GeoFire geoFireWorking = new GeoFire(refWorking);
         geoFireWorking.removeLocation(FirebaseAuth.getInstance().getCurrentUser().getUid());
     }
-    private List<Polyline> polylines;
-    // Remove route polylines
-    private void erasePolylines(){}
-    // Show map với điểm đi và điểm đến
-    private void setCameraWithCoordinationBounds(Route route) {}
-    //Add rout to map
     @Override
     public void onDirectionSuccess(Direction direction, String rawBody) {}
     @Override
@@ -1318,10 +1163,5 @@ public class DriverMapActivity extends AppCompatActivity implements NavigationVi
         super.onStop();
     }
 
-    /*@Override
-    protected void onStop() {
-        disconnectDriver();
-        super.onStop();
-    }*/
 
 }
