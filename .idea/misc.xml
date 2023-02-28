@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable-anydpi/ic_phone.xml" value="0.1505" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/avatar_10.xml" value="0.1045" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/button_rounded_blue.xml" value="0.1045" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/duong_vien_goc_tron.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/duong_vien_goc_tron_so_luong.xml" value="0.113" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_add_circle.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_arrow_forward_black_24dp.xml" value="0.1235" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_attach_money_black_24dp.xml" value="0.1145" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_baseline_attach_money_24.xml" value="0.1045" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_baseline_directions_bike_24.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.1045" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.1" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_baseline_store_24.xml" value="0.1145" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_check_default.xml" value="0.1145" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_chip.xml" value="0.1145" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_circle.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_circle_filled.xml" value="0.1145" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_credit_card_black_24dp.xml" value="0.1145" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_location_on_grey_24dp.xml" value="0.1145" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_location_on_primary_24dp.xml" value="0.1245" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/ic_map_black_24dp.xml" value="0.174" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/message_text_background.xml" value="0.1" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/message_text_background2.xml" value="0.142" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/drawable/shadow.xml" value="0.1" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/font/.xml" value="0.2546875" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/font/alex_brush.xml" value="0.2546875" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_add_payment.xml" value="0.17300724637681159" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_authentication.xml" value="0.17074275362318841" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_costumer_content.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_customer_content.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_customer_content_demo.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_customer_settings.xml" value="0.24283765347885403" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_details.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_driver_choose_type.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_driver_content.xml" value="0.14" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_driver_content2.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_driver_settings.xml" value="0.22" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_history.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_history2.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_history_single.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_history_single2.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_income.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_income_driver.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_map_customer.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_map_driver.xml" value="0.22" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_payment.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_payout.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_settings.xml" value="0.15307971014492755" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_status.xml" value="0.16" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_users.xml" value="0.20018115942028986" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/activity_watch_driver.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/add_payment_content.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/app_bar_layout.xml" value="0.20018115942028986" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/app_bar_layout_cust.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/app_bar_layout_driver.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/app_bar_main55.xml" value="0.22" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/chat_custom_bar.xml" value="0.22" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/chat_customer_bar.xml" value="0.10714285714285714" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/dialog_card.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/dialog_ride_review.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/fragment_login.xml" value="0.22" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/fragment_menu.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/fragment_registration.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/item__card_request.xml" value="0.14" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/item_card.xml" value="0.22" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/item_history.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/item_history2.xml" value="0.5" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/item_marker.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/item_payout.xml" value="0.2" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/item_type.xml" value="0.21" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/message_single_layout.xml" value="0.25" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/nav_header_main.xml" value="0.18" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/nav_header_main_cust.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/nav_header_main_driver.xml" value="0.17685185185185184" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/layout/user_single_layout.xml" value="0.20018115942028986" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/menu/customer_main.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/menu/driver_main.xml" value="0.33" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/menu/main.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/menu/menu_right_customer.xml" value="0.22447916666666667" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/menu/menu_right_driver.xml" value="0.19074074074074074" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/mipmap-anydpi-v26/ic_giao_hang.xml" value="0.1505" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/mipmap-anydpi-v26/ic_giao_hang_round.xml" value="0.1505" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1505" />
+        <entry key="..\:/DATN/Giaohang_ban1/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1505" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/drawable/ic_add_circle.xml" value="0.1245" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_add_payment.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_authentication.xml" value="0.1" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_costumer_content.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_customer_settings.xml" value="0.1" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_details.xml" value="0.1" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_driver_choose_type.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_driver_content.xml" value="0.1" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_driver_settings.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_history.xml" value="0.18" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_history_single.xml" value="0.16" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_map_customer.xml" value="0.22" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/activity_map_driver.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/dialog_card.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/dialog_ride_review.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/fragment_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/fragment_menu.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/fragment_registration.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/item__card_request.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/item_card.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/item_history.xml" value="0.17074275362318841" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/layout/item_marker.xml" value="0.33" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/menu/customer_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/coc coc download/UberClone-master/UberClone-master/android/app/src/main/res/menu/main.xml" value="0.22447916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

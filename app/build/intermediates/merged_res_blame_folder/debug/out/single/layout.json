@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_customer_content_demo.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_customer_content_demo.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_ride_review.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\dialog_ride_review.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_history2.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_history2.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_settings.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_driver_content2.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_driver_content2.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_income_driver.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_income_driver.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_map_customer.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_map_customer.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_driver_settings.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_driver_settings.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_history_single2.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_history_single2.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_map_driver.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_map_driver.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_profile.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_authentication.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_authentication.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\user_single_layout.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\user_single_layout.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\chat_custom_bar.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\chat_custom_bar.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main_cust.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\nav_header_main_cust.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_registration.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\fragment_registration.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main_driver.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\nav_header_main_driver.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_marker.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\item_marker.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_customer_content.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_customer_content.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_type.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\item_type.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_chat.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_card.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\item_card.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_driver_choose_type.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_driver_choose_type.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_card.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\dialog_card.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_users.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_users.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_layout_cust.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\app_bar_layout_cust.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_history2.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\item_history2.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_status.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_status.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_driver_content.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_driver_content.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_menu.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\fragment_menu.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_details.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_details.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_watch_driver.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_watch_driver.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\message_single_layout.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\message_single_layout.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_layout_driver.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\app_bar_layout_driver.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_history.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\item_history.xml"
+    },
+    {
+        "merged": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_customer_request_settings.xml",
+        "source": "C:\\DATN\\Giaohang_ban1\\android\\app\\src\\main\\res\\layout\\activity_customer_request_settings.xml"
+    }
+]

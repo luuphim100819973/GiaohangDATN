@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3F51B5"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:id="@+id/layout">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColorHint="@color/lightGrey">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5sp"
+            android:hint="Tên"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--  android:backgroundTint="@color/lightGrey"-->
+
+    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+        android:id="@+id/radioRealButtonGroup"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30sp"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="2dp"
+        app:borderColor="@color/quantum_white_100"
+        app:borderWidth="2dp"
+        app:divider="@color/quantum_white_100"
+        app:dividerPadding="10dp"
+        app:dividerWidth="1dp"
+        app:position="1"
+        app:radius="80dp"
+        app:ripple="true"
+        app:rippleColor="@color/colorAccentDark"
+        app:selectedBackground="#95251D">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+
+            app:drawableGravity="top"
+            app:drawableHeight="48dp"
+            app:drawableWidth="48dp"
+            app:text="Khách"
+            app:textColor="@color/white" />
+        <!--        app:drawableTint="@color/white"-->
+
+        <com.addisonelliott.segmentedbutton.SegmentedButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+
+            app:drawableGravity="top"
+            app:drawableHeight="48dp"
+            app:drawableTint="@color/white"
+            app:drawableWidth="48dp"
+            app:text="Tài xế"
+            app:textColor="@color/white" />
+    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:background="#A12A21"
+        android:text="Tạo tài khoản"
+        android:id="@+id/register"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

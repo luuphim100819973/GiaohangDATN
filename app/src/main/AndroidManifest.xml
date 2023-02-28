@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.giaohang">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.screen.portrait" />
+
+    <application
+        android:icon="@mipmap/ic_giao_hang"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_giao_hang_round"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".IncomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WatchDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Chat.ChatActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".History.HistoryActivity2"
+            android:exported="false" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <!--
+<meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA-Mfy5ts7il-BT55FYsWAs2fUqld7PD3k" />
+
+
+        <activity android:name=".Driver.DriverChooseTypeActivity" />
+        <!--
+  <activity android:name="com.example.giaohang.Payment.PaymentActivity" />
+        <activity android:name="com.example.giaohang.Payment.PayoutActivity" />
+        <activity android:name="com.example.giaohang.Payment.AddPaymentActivity" />
+        -->
+        <activity android:name=".Login.DetailsChooseActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name=".Login.LauncherActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UsersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login.AuthenticationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.CustomerMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Customer.CustomerSettingsRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Driver.DriverSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".History.HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".History.HistorySingleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".History.HistorySingleActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Driver.DriverMapActivity"
+            android:screenOrientation="portrait"
+             />
+
+        <service android:name=".onAppKilled" />
+    </application>
+
+</manifest>

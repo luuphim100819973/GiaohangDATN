@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\DATN\\Giaohang_ban1\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldpi-v4\\values-ldpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\cuong.dv150480\\Documents\\caches\\transforms-2\\files-2.1\\0b09becf8bc4b522a2c03063695e0d8c\\jetified-stripe-android-16.1.1\\res\\values-ldpi-v4\\values-ldpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                }
+            ]
+        }
+    ]
+}

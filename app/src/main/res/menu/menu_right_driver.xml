@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main_new_order"
+        android:title="New offer" />
+    <item
+        android:id="@+id/ordering"
+        android:title="Ordering" />
+    <item
+        android:id="@+id/receiving"
+        android:title="Receiving" />
+    <item
+        android:id="@+id/main_setting_btn"
+        android:title="Account setting" />
+    <item
+        android:id="@+id/main_all_users_btn"
+        android:title="All Users" />
+    <item
+        android:id="@+id/map_menu"
+        android:title="Map" />
+
+    <item
+        android:id="@+id/customer_map_activity"
+        android:title="Customer map activity" />
+    <item
+        android:id="@+id/driver_map_activity"
+        android:title="Driver map activity" />
+    <item
+        android:id="@+id/main_logout_btn"
+        android:title="Log out" />
+
+</menu>

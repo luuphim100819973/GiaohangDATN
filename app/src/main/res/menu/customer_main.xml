@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/request"
+            android:title="Tạo đơn hàng"
+            android:tooltipText="Change Account Orders" />
+
+        <item
+            android:id="@+id/payment"
+            android:title="..."
+            android:tooltipText="Payment Settings"/>
+
+        <item
+            android:id="@+id/example2"
+            android:title="..."/>
+        <item
+            android:id="@+id/example3"
+            android:title="..."/>
+    </group>
+
+
+</menu>

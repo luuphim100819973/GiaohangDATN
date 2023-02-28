@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatusActivity">
+
+     <ProgressBar
+         android:id="@+id/progress_bar"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="68dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="1.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <include
+         android:id="@+id/status_app_bar"
+         layout="@layout/app_bar_layout_driver"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+     <Button
+         android:id="@+id/status_save_btn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="96dp"
+         android:text="button"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.769"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/status_input"
+         tools:text="Chang Status" />
+
+     <com.google.android.material.textfield.TextInputLayout
+         android:id="@+id/status_input"
+         android:layout_width="409dp"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="30dp"
+         android:layout_marginTop="40dp"
+         android:layout_marginEnd="30dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/status_app_bar">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="hint" />
+     </com.google.android.material.textfield.TextInputLayout>
+
+     <TextView
+         android:id="@+id/textView3"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:text="Đơn đang giao"
+         android:textSize="20sp"
+         android:textStyle="bold"
+         tools:layout_editor_absoluteX="16dp"
+         tools:layout_editor_absoluteY="-16dp" />
+
+     <EditText
+         android:id="@+id/mTitle"
+         android:layout_width="278dp"
+         android:layout_height="48dp"
+         android:layout_marginTop="404dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.511"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+     <EditText
+         android:id="@+id/mMessage"
+         android:layout_width="278dp"
+         android:layout_height="48dp"
+         android:layout_marginTop="340dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.496"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+     <Button
+         android:id="@+id/mButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="168dp"
+         android:layout_marginTop="452dp"
+         android:text="Send"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

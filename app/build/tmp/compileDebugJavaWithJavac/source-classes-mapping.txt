@@ -1,0 +1,259 @@
+com/example/giaohang/databinding/ActivityDetailsBinding.java
+ com.example.giaohang.databinding.ActivityDetailsBinding
+com/example/giaohang/databinding/ActivityCustomerContentDemoBinding.java
+ com.example.giaohang.databinding.ActivityCustomerContentDemoBinding
+com/example/giaohang/databinding/AppBarLayoutDriverBinding.java
+ com.example.giaohang.databinding.AppBarLayoutDriverBinding
+com/example/giaohang/databinding/ActivityProfileBinding.java
+ com.example.giaohang.databinding.ActivityProfileBinding
+com/example/giaohang/Objects/LocationObject.java
+ com.example.giaohang.Objects.LocationObject
+com/example/giaohang/Objects/CustomerObject.java
+ com.example.giaohang.Objects.CustomerObject
+com/example/giaohang/IncomeActivity.java
+ com.example.giaohang.IncomeActivity
+ com.example.giaohang.IncomeActivity$1
+com/example/giaohang/BuildConfig.java
+ com.example.giaohang.BuildConfig
+com/example/giaohang/databinding/AppBarLayoutCustBinding.java
+ com.example.giaohang.databinding.AppBarLayoutCustBinding
+com/example/giaohang/databinding/FragmentMenuBinding.java
+ com.example.giaohang.databinding.FragmentMenuBinding
+com/example/giaohang/WatchDriverActivity.java
+ com.example.giaohang.WatchDriverActivity
+ com.example.giaohang.WatchDriverActivity$1
+ com.example.giaohang.WatchDriverActivity$2
+ com.example.giaohang.WatchDriverActivity$3
+com/example/giaohang/Login/RegisterFragment.java
+ com.example.giaohang.Login.RegisterFragment
+com/example/giaohang/databinding/ActivityMapDriverBinding.java
+ com.example.giaohang.databinding.ActivityMapDriverBinding
+com/example/giaohang/databinding/ItemMarkerBinding.java
+ com.example.giaohang.databinding.ItemMarkerBinding
+com/example/giaohang/History/HistoryActivity2.java
+ com.example.giaohang.History.HistoryActivity2
+ com.example.giaohang.History.HistoryActivity2$1
+ com.example.giaohang.History.HistoryActivity2$2
+com/example/giaohang/databinding/DialogCardBinding.java
+ com.example.giaohang.databinding.DialogCardBinding
+com/example/giaohang/databinding/MessageSingleLayoutBinding.java
+ com.example.giaohang.databinding.MessageSingleLayoutBinding
+com/example/giaohang/databinding/ActivityDriverContent2Binding.java
+ com.example.giaohang.databinding.ActivityDriverContent2Binding
+com/example/giaohang/databinding/UserSingleLayoutBinding.java
+ com.example.giaohang.databinding.UserSingleLayoutBinding
+com/example/giaohang/databinding/ActivityDriverSettingsBinding.java
+ com.example.giaohang.databinding.ActivityDriverSettingsBinding
+com/example/giaohang/databinding/ActivityDriverChooseTypeBinding.java
+ com.example.giaohang.databinding.ActivityDriverChooseTypeBinding
+com/example/giaohang/databinding/ItemTypeBinding.java
+ com.example.giaohang.databinding.ItemTypeBinding
+com/example/giaohang/databinding/ActivityAuthenticationBinding.java
+ com.example.giaohang.databinding.ActivityAuthenticationBinding
+com/example/giaohang/databinding/ActivityHistory2Binding.java
+ com.example.giaohang.databinding.ActivityHistory2Binding
+com/example/giaohang/Adapters/HistoryAdapter2.java
+ com.example.giaohang.Adapters.HistoryAdapter2
+com/example/giaohang/UsersActivity.java
+ com.example.giaohang.UsersActivity
+ com.example.giaohang.UsersActivity$personAdapter
+ com.example.giaohang.UsersActivity$personAdapter$1
+ com.example.giaohang.UsersActivity$personAdapter$personsViewHolder
+com/example/giaohang/databinding/ActivityDriverContentBinding.java
+ com.example.giaohang.databinding.ActivityDriverContentBinding
+com/example/giaohang/databinding/ActivityStatusBinding.java
+ com.example.giaohang.databinding.ActivityStatusBinding
+com/example/giaohang/Chat/GetTimeAgo.java
+ com.example.giaohang.Chat.GetTimeAgo
+com/example/giaohang/databinding/ActivityMapCustomerBinding.java
+ com.example.giaohang.databinding.ActivityMapCustomerBinding
+com/example/giaohang/History/HistoryViewHolders.java
+ com.example.giaohang.History.HistoryViewHolders
+com/example/giaohang/databinding/ActivitySettingsBinding.java
+ com.example.giaohang.databinding.ActivitySettingsBinding
+com/example/giaohang/Objects/TypeObject.java
+ com.example.giaohang.Objects.TypeObject
+com/example/giaohang/databinding/ItemHistory2Binding.java
+ com.example.giaohang.databinding.ItemHistory2Binding
+com/example/giaohang/Objects/RideObject.java
+ com.example.giaohang.Objects.RideObject
+com/example/giaohang/History/HistorySingleActivity2.java
+ com.example.giaohang.History.HistorySingleActivity2
+ com.example.giaohang.History.HistorySingleActivity2$1
+ com.example.giaohang.History.HistorySingleActivity2$2
+ com.example.giaohang.History.HistorySingleActivity2$3
+com/example/giaohang/Objects/HistoryObject.java
+ com.example.giaohang.Objects.HistoryObject
+com/example/giaohang/Customer/CustomerSettingsRequestActivity.java
+ com.example.giaohang.Customer.CustomerSettingsRequestActivity
+ com.example.giaohang.Customer.CustomerSettingsRequestActivity$1
+ com.example.giaohang.Customer.CustomerSettingsRequestActivity$2
+ com.example.giaohang.Customer.CustomerSettingsRequestActivity$3
+ com.example.giaohang.Customer.CustomerSettingsRequestActivity$4
+ com.example.giaohang.Customer.CustomerSettingsRequestActivity$5
+com/example/giaohang/databinding/ActivityCustomerContentBinding.java
+ com.example.giaohang.databinding.ActivityCustomerContentBinding
+com/example/giaohang/databinding/ActivityCustomerRequestSettingsBinding.java
+ com.example.giaohang.databinding.ActivityCustomerRequestSettingsBinding
+com/example/giaohang/databinding/ActivityWatchDriverBinding.java
+ com.example.giaohang.databinding.ActivityWatchDriverBinding
+com/example/giaohang/databinding/ItemHistoryBinding.java
+ com.example.giaohang.databinding.ItemHistoryBinding
+com/example/giaohang/databinding/ChatCustomBarBinding.java
+ com.example.giaohang.databinding.ChatCustomBarBinding
+com/example/giaohang/databinding/FragmentRegistrationBinding.java
+ com.example.giaohang.databinding.FragmentRegistrationBinding
+com/example/giaohang/Login/LoginFragment.java
+ com.example.giaohang.Login.LoginFragment
+com/example/giaohang/databinding/ActivityIncomeDriverBinding.java
+ com.example.giaohang.databinding.ActivityIncomeDriverBinding
+com/example/giaohang/Users.java
+ com.example.giaohang.Users
+com/example/giaohang/databinding/NavHeaderMainCustBinding.java
+ com.example.giaohang.databinding.NavHeaderMainCustBinding
+com/example/giaohang/databinding/ActivityHistorySingle2Binding.java
+ com.example.giaohang.databinding.ActivityHistorySingle2Binding
+com/example/giaohang/databinding/ActivityUsersBinding.java
+ com.example.giaohang.databinding.ActivityUsersBinding
+com/example/giaohang/SettingsActivity.java
+ com.example.giaohang.SettingsActivity
+ com.example.giaohang.SettingsActivity$1
+ com.example.giaohang.SettingsActivity$2
+ com.example.giaohang.SettingsActivity$3
+ com.example.giaohang.SettingsActivity$4
+ com.example.giaohang.SettingsActivity$5
+ com.example.giaohang.SettingsActivity$5$1
+com/example/giaohang/databinding/FragmentLoginBinding.java
+ com.example.giaohang.databinding.FragmentLoginBinding
+com/example/giaohang/databinding/ItemCardBinding.java
+ com.example.giaohang.databinding.ItemCardBinding
+com/example/giaohang/Adapters/TypeAdapter.java
+ com.example.giaohang.Adapters.TypeAdapter
+ com.example.giaohang.Adapters.TypeAdapter$viewHolders
+com/example/giaohang/databinding/DialogRideReviewBinding.java
+ com.example.giaohang.databinding.DialogRideReviewBinding
+com/example/giaohang/Chat/MessageAdapter.java
+ com.example.giaohang.Chat.MessageAdapter
+ com.example.giaohang.Chat.MessageAdapter$1
+ com.example.giaohang.Chat.MessageAdapter$1$1
+ com.example.giaohang.Chat.MessageAdapter$MessageViewHolder
+com/example/giaohang/Chat/Messages.java
+ com.example.giaohang.Chat.Messages
+com/example/giaohang/StatusActivity.java
+ com.example.giaohang.StatusActivity
+ com.example.giaohang.StatusActivity$1
+ com.example.giaohang.StatusActivity$2
+ com.example.giaohang.StatusActivity$2$1
+com/example/giaohang/FCMsend.java
+ com.example.giaohang.FCMsend
+ com.example.giaohang.FCMsend$1
+ com.example.giaohang.FCMsend$2
+ com.example.giaohang.FCMsend$3
+com/example/giaohang/ProfileActivity.java
+ com.example.giaohang.ProfileActivity
+ com.example.giaohang.ProfileActivity$1
+ com.example.giaohang.ProfileActivity$1$1
+ com.example.giaohang.ProfileActivity$1$1$1
+ com.example.giaohang.ProfileActivity$2
+ com.example.giaohang.ProfileActivity$2$1
+ com.example.giaohang.ProfileActivity$2$2
+ com.example.giaohang.ProfileActivity$2$2$1
+ com.example.giaohang.ProfileActivity$2$3
+ com.example.giaohang.ProfileActivity$2$4
+com/example/giaohang/Objects/DriverObject.java
+ com.example.giaohang.Objects.DriverObject
+com/example/giaohang/databinding/ActivityChatBinding.java
+ com.example.giaohang.databinding.ActivityChatBinding
+com/example/giaohang/Chat/ChatActivity.java
+ com.example.giaohang.Chat.ChatActivity
+ com.example.giaohang.Chat.ChatActivity$1
+ com.example.giaohang.Chat.ChatActivity$2
+ com.example.giaohang.Chat.ChatActivity$2$1
+ com.example.giaohang.Chat.ChatActivity$3
+ com.example.giaohang.Chat.ChatActivity$4
+ com.example.giaohang.Chat.ChatActivity$5
+ com.example.giaohang.Chat.ChatActivity$6
+ com.example.giaohang.Chat.ChatActivity$6$1
+ com.example.giaohang.Chat.ChatActivity$6$1$1
+ com.example.giaohang.Chat.ChatActivity$7
+ com.example.giaohang.Chat.ChatActivity$8
+ com.example.giaohang.Chat.ChatActivity$9
+com/example/giaohang/databinding/NavHeaderMainDriverBinding.java
+ com.example.giaohang.databinding.NavHeaderMainDriverBinding
+com/example/giaohang/Driver/DriverMapActivity.java
+ com.example.giaohang.Driver.DriverMapActivity
+ com.example.giaohang.Driver.DriverMapActivity$1
+ com.example.giaohang.Driver.DriverMapActivity$10
+ com.example.giaohang.Driver.DriverMapActivity$11
+ com.example.giaohang.Driver.DriverMapActivity$12
+ com.example.giaohang.Driver.DriverMapActivity$13
+ com.example.giaohang.Driver.DriverMapActivity$13$1
+ com.example.giaohang.Driver.DriverMapActivity$13$2
+ com.example.giaohang.Driver.DriverMapActivity$13$2$1
+ com.example.giaohang.Driver.DriverMapActivity$13$2$1$1
+ com.example.giaohang.Driver.DriverMapActivity$13$2$1$2
+ com.example.giaohang.Driver.DriverMapActivity$13$2$1$2$1
+ com.example.giaohang.Driver.DriverMapActivity$13$2$1$2$1$1
+ com.example.giaohang.Driver.DriverMapActivity$13$2$1$2$2
+ com.example.giaohang.Driver.DriverMapActivity$13$2$1$2$2$1
+ com.example.giaohang.Driver.DriverMapActivity$14
+ com.example.giaohang.Driver.DriverMapActivity$2
+ com.example.giaohang.Driver.DriverMapActivity$3
+ com.example.giaohang.Driver.DriverMapActivity$4
+ com.example.giaohang.Driver.DriverMapActivity$5
+ com.example.giaohang.Driver.DriverMapActivity$5$1
+ com.example.giaohang.Driver.DriverMapActivity$5$2
+ com.example.giaohang.Driver.DriverMapActivity$6
+ com.example.giaohang.Driver.DriverMapActivity$6$1
+ com.example.giaohang.Driver.DriverMapActivity$6$1$1
+ com.example.giaohang.Driver.DriverMapActivity$7
+ com.example.giaohang.Driver.DriverMapActivity$8
+ com.example.giaohang.Driver.DriverMapActivity$9
+com/example/giaohang/Driver/DriverSettingsActivity.java
+ com.example.giaohang.Driver.DriverSettingsActivity
+ com.example.giaohang.Driver.DriverSettingsActivity$1
+com/example/giaohang/Utils/Utils.java
+ com.example.giaohang.Utils.Utils
+com/example/giaohang/Login/LauncherActivity.java
+ com.example.giaohang.Login.LauncherActivity
+ com.example.giaohang.Login.LauncherActivity$1
+ com.example.giaohang.Login.LauncherActivity$1$1
+ com.example.giaohang.Login.LauncherActivity$1$1$1
+ com.example.giaohang.Login.LauncherActivity$2
+ com.example.giaohang.Login.LauncherActivity$2$1
+ com.example.giaohang.Login.LauncherActivity$2$1$1
+com/example/giaohang/Customer/CustomerMapActivity.java
+ com.example.giaohang.Customer.CustomerMapActivity
+ com.example.giaohang.Customer.CustomerMapActivity$1
+ com.example.giaohang.Customer.CustomerMapActivity$10
+ com.example.giaohang.Customer.CustomerMapActivity$11
+ com.example.giaohang.Customer.CustomerMapActivity$12
+ com.example.giaohang.Customer.CustomerMapActivity$12$1
+ com.example.giaohang.Customer.CustomerMapActivity$13
+ com.example.giaohang.Customer.CustomerMapActivity$14
+ com.example.giaohang.Customer.CustomerMapActivity$15
+ com.example.giaohang.Customer.CustomerMapActivity$2
+ com.example.giaohang.Customer.CustomerMapActivity$3
+ com.example.giaohang.Customer.CustomerMapActivity$3$1
+ com.example.giaohang.Customer.CustomerMapActivity$4
+ com.example.giaohang.Customer.CustomerMapActivity$5
+ com.example.giaohang.Customer.CustomerMapActivity$6
+ com.example.giaohang.Customer.CustomerMapActivity$6$1
+ com.example.giaohang.Customer.CustomerMapActivity$7
+ com.example.giaohang.Customer.CustomerMapActivity$7$1
+ com.example.giaohang.Customer.CustomerMapActivity$8
+ com.example.giaohang.Customer.CustomerMapActivity$9
+ com.example.giaohang.Customer.CustomerMapActivity$FirebaseCallback
+com/example/giaohang/FirebaseMessagingService.java
+ com.example.giaohang.FirebaseMessagingService
+com/example/giaohang/Driver/DriverChooseTypeActivity.java
+ com.example.giaohang.Driver.DriverChooseTypeActivity
+com/example/giaohang/onAppKilled.java
+ com.example.giaohang.onAppKilled
+com/example/giaohang/Login/DetailsChooseActivity.java
+ com.example.giaohang.Login.DetailsChooseActivity
+ com.example.giaohang.Login.DetailsChooseActivity$1
+com/example/giaohang/Login/MenuFragment.java
+ com.example.giaohang.Login.MenuFragment
+com/example/giaohang/Login/AuthenticationActivity.java
+ com.example.giaohang.Login.AuthenticationActivity

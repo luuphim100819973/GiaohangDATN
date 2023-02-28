@@ -1,0 +1,888 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.giaohang"
+4    android:versionCode="1"
+5    android:versionName="2.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:6:5-81
+11-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:6:22-78
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:7:5-79
+12-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:6:5-81
+13-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:6:22-78
+14    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+14-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:9:5-85
+14-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:9:22-82
+15    <uses-permission android:name="android.permission.CALL_PHONE" />
+15-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:10:5-69
+15-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:10:22-66
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:11:5-67
+16-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:11:22-64
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:12:5-80
+17-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:12:22-77
+18    <uses-permission android:name="android.permission.VIBRATE" />
+18-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:13:5-66
+18-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:13:22-63
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:11:5-67
+19-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:11:22-64
+20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+20-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:12:5-80
+20-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:12:22-77
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:16:5-81
+21-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:16:22-78
+22
+23    <uses-feature android:name="android.hardware.location.gps" />
+23-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:18:5-66
+23-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:18:19-63
+24
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:20:5-79
+25-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:20:22-76
+26
+27    <uses-feature
+27-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:22:5-24:35
+28        android:glEsVersion="0x00020000"
+28-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:23:9-41
+29        android:required="true" />
+29-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:24:9-32
+30    <uses-feature android:name="android.hardware.screen.portrait" />
+30-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:25:5-69
+30-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:25:19-66
+31
+32    <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
+33    <permission
+33-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:7:5-9:47
+34        android:name="com.example.giaohang.permission.C2D_MESSAGE"
+34-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:8:9-63
+35        android:protectionLevel="signature" />
+35-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:9:9-44
+36
+37    <uses-permission android:name="com.example.giaohang.permission.C2D_MESSAGE" />
+37-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:11:5-79
+37-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:11:22-76
+38    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
+38-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:17:5-82
+38-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:17:22-79
+39    <uses-permission android:name="android.permission.WAKE_LOCK" />
+39-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:18:5-68
+39-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:18:22-65
+40    <!--
+41 Use to restore notifications the user hasn't interacted with.
+42         They could be missed notifications if the user reboots their device if this isn't in place.
+43    -->
+44    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- START: ShortcutBadger -->
+44-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:29:5-81
+44-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:29:22-78
+45    <!-- Samsung -->
+46    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+46-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:31:5-86
+46-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:31:22-83
+47    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- HTC -->
+47-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:32:5-87
+47-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:32:22-84
+48    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+48-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:33:5-81
+48-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:33:22-78
+49    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- Sony -->
+49-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:34:5-83
+49-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:34:22-80
+50    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+50-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:35:5-88
+50-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:35:22-85
+51    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- Apex -->
+51-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:36:5-92
+51-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:36:22-89
+52    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- Solid -->
+52-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:37:5-84
+52-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:37:22-81
+53    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Huawei -->
+53-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:38:5-83
+53-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:38:22-80
+54    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+54-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:39:5-91
+54-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:39:22-88
+55    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+55-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:40:5-92
+55-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:40:22-89
+56    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- ZUK -->
+56-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:41:5-93
+56-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:41:22-90
+57    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- OPPO -->
+57-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:42:5-73
+57-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:42:22-70
+58    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+58-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:43:5-82
+58-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:43:22-79
+59    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
+59-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:44:5-83
+59-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:44:22-80
+60    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+60-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:45:5-88
+60-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:45:22-85
+61    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+61-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:46:5-89
+61-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:46:22-86
+62    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+62-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:17:5-76
+62-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:17:22-73
+63
+64    <queries>
+64-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d44454e9ecefafaa72984dc4666c94a0\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+65
+66        <!-- Needs to be explicitly declared on Android R+ -->
+67        <package android:name="com.google.android.apps.maps" />
+67-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d44454e9ecefafaa72984dc4666c94a0\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+67-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d44454e9ecefafaa72984dc4666c94a0\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+68    </queries>
+69
+70    <uses-permission android:name="android.permission.CAMERA" />
+70-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:9:5-65
+70-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:9:22-62
+71
+72    <uses-feature
+72-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:12:5-14:36
+73        android:name="android.hardware.camera"
+73-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:13:9-47
+74        android:required="false" />
+74-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:14:9-33
+75    <uses-feature
+75-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:15:5-17:36
+76        android:name="android.hardware.camera.autofocus"
+76-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:16:9-57
+77        android:required="false" />
+77-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:17:9-33
+78
+79    <application
+79-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:27:5-124:19
+80        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+80-->[androidx.core:core:1.5.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\619ff029c7f1b32de44cf113421248c3\core-1.5.0\AndroidManifest.xml:24:18-86
+81        android:debuggable="true"
+82        android:icon="@mipmap/ic_giao_hang"
+82-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:28:9-44
+83        android:label="@string/app_name"
+83-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:29:9-41
+84        android:roundIcon="@mipmap/ic_giao_hang_round"
+84-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:30:9-55
+85        android:testOnly="true"
+86        android:theme="@style/AppTheme.NoActionBar" >
+86-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:31:9-52
+87        <activity
+87-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:33:9-35:40
+88            android:name="com.example.giaohang.IncomeActivity"
+88-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:34:13-43
+89            android:exported="false" />
+89-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:35:13-37
+90        <activity
+90-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:36:9-38:40
+91            android:name="com.example.giaohang.WatchDriverActivity"
+91-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:37:13-48
+92            android:exported="false" />
+92-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:38:13-37
+93        <activity
+93-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:39:9-41:40
+94            android:name="com.example.giaohang.Chat.ChatActivity"
+94-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:40:13-46
+95            android:exported="false" />
+95-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:41:13-37
+96
+97        <service
+97-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:43:9-49:19
+98            android:name="com.example.giaohang.FirebaseMessagingService"
+98-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:44:13-53
+99            android:exported="false" >
+99-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:45:13-37
+100            <intent-filter>
+100-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:46:13-48:29
+101                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+101-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:47:17-78
+101-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:47:25-75
+102            </intent-filter>
+103        </service>
+104
+105        <activity
+105-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:51:9-53:40
+106            android:name="com.example.giaohang.History.HistoryActivity2"
+106-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:52:13-53
+107            android:exported="false" />
+107-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:53:13-37
+108        <!--
+109             The API key for Google Maps-based APIs is defined as a string resource.
+110             (See the file "res/values/google_maps_api.xml").
+111             Note that the API key is linked to the encryption key used to sign the APK.
+112             You need a different API key for each encryption key, including the release key that is used to
+113             sign the APK for publishing.
+114             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+115        -->
+116        <!--
+117<meta-data android:name="com.google.android.gms.version"
+118            android:value="@integer/google_play_services_version" />
+119        -->
+120        <meta-data
+120-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:66:9-68:71
+121            android:name="com.google.android.geo.API_KEY"
+121-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:67:13-58
+122            android:value="AIzaSyA-Mfy5ts7il-BT55FYsWAs2fUqld7PD3k" />
+122-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:68:13-68
+123
+124        <activity android:name="com.example.giaohang.Driver.DriverChooseTypeActivity" />
+124-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:71:9-69
+124-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:71:19-66
+125        <!--
+126  <activity android:name="com.example.giaohang.Payment.PaymentActivity" />
+127        <activity android:name="com.example.giaohang.Payment.PayoutActivity" />
+128        <activity android:name="com.example.giaohang.Payment.AddPaymentActivity" />
+129        -->
+130        <activity android:name="com.example.giaohang.Login.DetailsChooseActivity" />
+130-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:77:9-65
+130-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:77:19-62
+131
+132        <uses-library
+132-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:79:9-81:40
+133            android:name="org.apache.http.legacy"
+133-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:80:13-50
+134            android:required="false" />
+134-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:81:13-37
+135        <uses-library android:name="com.google.android.maps" />
+135-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:82:9-64
+135-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:82:23-61
+136
+137        <activity
+137-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:84:9-93:20
+138            android:name="com.example.giaohang.Login.LauncherActivity"
+138-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:85:13-51
+139            android:exported="true"
+139-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:86:13-36
+140            android:screenOrientation="portrait" >
+140-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:87:13-49
+141            <intent-filter>
+141-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:88:13-92:29
+142                <action android:name="android.intent.action.MAIN" />
+142-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:89:17-69
+142-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:89:25-66
+143
+144                <category android:name="android.intent.category.LAUNCHER" />
+144-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:91:17-77
+144-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:91:27-74
+145            </intent-filter>
+146        </activity>
+147        <activity
+147-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:94:9-96:52
+148            android:name="com.example.giaohang.UsersActivity"
+148-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:95:13-42
+149            android:screenOrientation="portrait" />
+149-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:96:13-49
+150        <activity
+150-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:97:9-99:52
+151            android:name="com.example.giaohang.Login.AuthenticationActivity"
+151-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:98:13-57
+152            android:screenOrientation="portrait" />
+152-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:99:13-49
+153        <activity
+153-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:100:9-102:52
+154            android:name="com.example.giaohang.Customer.CustomerMapActivity"
+154-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:101:13-57
+155            android:screenOrientation="portrait" />
+155-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:102:13-49
+156        <activity
+156-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:103:9-105:52
+157            android:name="com.example.giaohang.Customer.CustomerSettingsRequestActivity"
+157-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:104:13-69
+158            android:screenOrientation="portrait" />
+158-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:105:13-49
+159        <activity
+159-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:106:9-108:52
+160            android:name="com.example.giaohang.Driver.DriverSettingsActivity"
+160-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:107:13-58
+161            android:screenOrientation="portrait" />
+161-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:108:13-49
+162        <activity
+162-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:109:9-111:52
+163            android:name="com.example.giaohang.History.HistoryActivity"
+163-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:110:13-52
+164            android:screenOrientation="portrait" />
+164-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:111:13-49
+165        <activity
+165-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:112:9-114:52
+166            android:name="com.example.giaohang.History.HistorySingleActivity"
+166-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:113:13-58
+167            android:screenOrientation="portrait" />
+167-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:114:13-49
+168        <activity
+168-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:115:9-117:52
+169            android:name="com.example.giaohang.History.HistorySingleActivity2"
+169-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:116:13-59
+170            android:screenOrientation="portrait" />
+170-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:117:13-49
+171        <activity
+171-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:118:9-121:16
+172            android:name="com.example.giaohang.Driver.DriverMapActivity"
+172-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:119:13-53
+173            android:screenOrientation="portrait" />
+173-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:120:13-49
+174
+175        <service android:name="com.example.giaohang.onAppKilled" />
+175-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:123:9-48
+175-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:123:18-45
+176
+177        <activity
+177-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:10:9-12:57
+178            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+178-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:11:13-76
+179            android:theme="@style/StripeDefaultTheme" />
+179-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:12:13-54
+180        <activity
+180-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:13:9-15:57
+181            android:name="com.stripe.android.view.PaymentMethodsActivity"
+181-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:14:13-74
+182            android:theme="@style/StripeDefaultTheme" />
+182-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:15:13-54
+183        <activity
+183-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:16:9-18:57
+184            android:name="com.stripe.android.view.PaymentFlowActivity"
+184-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:17:13-71
+185            android:theme="@style/StripeDefaultTheme" />
+185-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:18:13-54
+186        <activity
+186-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:19:9-22:58
+187            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+187-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:20:13-78
+188            android:theme="@style/StripeDefaultTheme"
+188-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:21:13-54
+189            android:windowSoftInputMode="adjustResize" />
+189-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:22:13-55
+190        <activity
+190-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:23:9-25:57
+191            android:name="com.stripe.android.view.PaymentRelayActivity"
+191-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:24:13-72
+192            android:theme="@style/StripeDefaultTheme" />
+192-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:25:13-54
+193        <activity
+193-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:26:9-28:57
+194            android:name="com.stripe.android.view.Stripe3ds2CompletionActivity"
+194-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:27:13-80
+195            android:theme="@style/StripeDefaultTheme" />
+195-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:28:13-54
+196        <activity
+196-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:29:9-31:69
+197            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+197-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:30:13-80
+198            android:theme="@style/StripePaymentSheetDefaultTheme" />
+198-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:31:13-66
+199        <activity
+199-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:32:9-34:69
+200            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+200-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:33:13-82
+201            android:theme="@style/StripePaymentSheetDefaultTheme" />
+201-->[com.stripe:stripe-android:16.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\0b09becf8bc4b522a2c03063695e0d8c\jetified-stripe-android-16.1.1\AndroidManifest.xml:34:13-66
+202        <activity
+202-->[com.stripe:stripe-3ds2-android:4.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a740535d7a0e57b0a49fd016b7dd3572\jetified-stripe-3ds2-android-4.1.2\AndroidManifest.xml:10:9-12:54
+203            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+203-->[com.stripe:stripe-3ds2-android:4.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a740535d7a0e57b0a49fd016b7dd3572\jetified-stripe-3ds2-android-4.1.2\AndroidManifest.xml:11:13-81
+204            android:theme="@style/Stripe3DS2Theme" />
+204-->[com.stripe:stripe-3ds2-android:4.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a740535d7a0e57b0a49fd016b7dd3572\jetified-stripe-3ds2-android-4.1.2\AndroidManifest.xml:12:13-51
+205        <activity
+205-->[com.stripe:stripe-3ds2-android:4.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a740535d7a0e57b0a49fd016b7dd3572\jetified-stripe-3ds2-android-4.1.2\AndroidManifest.xml:13:9-15:54
+206            android:name="com.stripe.android.stripe3ds2.views.ChallengeProgressActivity"
+206-->[com.stripe:stripe-3ds2-android:4.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a740535d7a0e57b0a49fd016b7dd3572\jetified-stripe-3ds2-android-4.1.2\AndroidManifest.xml:14:13-89
+207            android:theme="@style/Stripe3DS2Theme" />
+207-->[com.stripe:stripe-3ds2-android:4.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a740535d7a0e57b0a49fd016b7dd3572\jetified-stripe-3ds2-android-4.1.2\AndroidManifest.xml:15:13-51
+208
+209        <service
+209-->[com.google.firebase:firebase-inappmessaging:20.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\84527ce48c33759d07f9b16861ffdaa1\jetified-firebase-inappmessaging-20.1.2\AndroidManifest.xml:14:9-20:19
+210            android:name="com.google.firebase.components.ComponentDiscoveryService"
+210-->[com.google.firebase:firebase-inappmessaging:20.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\84527ce48c33759d07f9b16861ffdaa1\jetified-firebase-inappmessaging-20.1.2\AndroidManifest.xml:15:13-84
+211            android:directBootAware="true"
+211-->[com.google.firebase:firebase-common:20.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\9ae8708fc8abd665145dcfed18978909\jetified-firebase-common-20.1.1\AndroidManifest.xml:35:13-43
+212            android:exported="false" >
+212-->[com.google.firebase:firebase-inappmessaging:20.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\84527ce48c33759d07f9b16861ffdaa1\jetified-firebase-inappmessaging-20.1.2\AndroidManifest.xml:16:13-37
+213            <meta-data
+213-->[com.google.firebase:firebase-inappmessaging:20.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\84527ce48c33759d07f9b16861ffdaa1\jetified-firebase-inappmessaging-20.1.2\AndroidManifest.xml:17:13-19:85
+214                android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar"
+214-->[com.google.firebase:firebase-inappmessaging:20.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\84527ce48c33759d07f9b16861ffdaa1\jetified-firebase-inappmessaging-20.1.2\AndroidManifest.xml:18:17-129
+215                android:value="com.google.firebase.components.ComponentRegistrar" />
+215-->[com.google.firebase:firebase-inappmessaging:20.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\84527ce48c33759d07f9b16861ffdaa1\jetified-firebase-inappmessaging-20.1.2\AndroidManifest.xml:19:17-82
+216            <meta-data
+216-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:67:13-69:85
+217                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+217-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:68:17-109
+218                android:value="com.google.firebase.components.ComponentRegistrar" />
+218-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:69:17-82
+219            <meta-data
+219-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\adff7736bf5ac51ea43f8d7c9e9a58ca\jetified-firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
+220                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+220-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\adff7736bf5ac51ea43f8d7c9e9a58ca\jetified-firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
+221                android:value="com.google.firebase.components.ComponentRegistrar" />
+221-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\adff7736bf5ac51ea43f8d7c9e9a58ca\jetified-firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
+222            <meta-data
+222-->[com.google.firebase:firebase-database:20.0.5] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a3e77cdc1a7170743955bb00d6abf0e1\jetified-firebase-database-20.0.5\AndroidManifest.xml:32:13-34:85
+223                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+223-->[com.google.firebase:firebase-database:20.0.5] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a3e77cdc1a7170743955bb00d6abf0e1\jetified-firebase-database-20.0.5\AndroidManifest.xml:33:17-109
+224                android:value="com.google.firebase.components.ComponentRegistrar" />
+224-->[com.google.firebase:firebase-database:20.0.5] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a3e77cdc1a7170743955bb00d6abf0e1\jetified-firebase-database-20.0.5\AndroidManifest.xml:34:17-82
+225            <meta-data
+225-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:55:13-57:85
+226                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+226-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:56:17-119
+227                android:value="com.google.firebase.components.ComponentRegistrar" />
+227-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:57:17-82
+228            <meta-data
+228-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\7536bc4f9799921f66d14ef6e7fe1796\jetified-firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
+229                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+229-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\7536bc4f9799921f66d14ef6e7fe1796\jetified-firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
+230                android:value="com.google.firebase.components.ComponentRegistrar" />
+230-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\7536bc4f9799921f66d14ef6e7fe1796\jetified-firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
+231            <meta-data
+231-->[com.google.firebase:firebase-abt:21.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5413056efa25cff4254203117fda4ba2\jetified-firebase-abt-21.0.1\AndroidManifest.xml:13:13-15:85
+232                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+232-->[com.google.firebase:firebase-abt:21.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5413056efa25cff4254203117fda4ba2\jetified-firebase-abt-21.0.1\AndroidManifest.xml:14:17-109
+233                android:value="com.google.firebase.components.ComponentRegistrar" />
+233-->[com.google.firebase:firebase-abt:21.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5413056efa25cff4254203117fda4ba2\jetified-firebase-abt-21.0.1\AndroidManifest.xml:15:17-82
+234            <meta-data
+234-->[com.google.firebase:firebase-datatransport:18.1.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5334f694dc810728036c6c3bf33606ca\jetified-firebase-datatransport-18.1.3\AndroidManifest.xml:28:13-30:85
+235                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+235-->[com.google.firebase:firebase-datatransport:18.1.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5334f694dc810728036c6c3bf33606ca\jetified-firebase-datatransport-18.1.3\AndroidManifest.xml:29:17-115
+236                android:value="com.google.firebase.components.ComponentRegistrar" />
+236-->[com.google.firebase:firebase-datatransport:18.1.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5334f694dc810728036c6c3bf33606ca\jetified-firebase-datatransport-18.1.3\AndroidManifest.xml:30:17-82
+237        </service>
+238
+239        <meta-data
+239-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:49:9-51:51
+240            android:name="onesignal_app_id"
+240-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:50:13-44
+241            android:value="onesignal_app_id" /> <!-- Deprecated - Pulled from OneSignal dashboard. -->
+241-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:51:13-48
+242        <meta-data
+242-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:53:9-55:70
+243            android:name="onesignal_google_project_number"
+243-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:54:13-59
+244            android:value="str:REMOTE" />
+244-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:55:13-67
+245
+246        <receiver
+246-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:57:9-67:20
+247            android:name="com.onesignal.GcmBroadcastReceiver"
+247-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:58:13-62
+248            android:permission="com.google.android.c2dm.permission.SEND" >
+248-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:59:13-73
+249
+250            <!-- High priority so OneSignal payloads can be filtered from other GCM receivers if filterOtherGCMReceivers is enabled. -->
+251            <intent-filter android:priority="999" >
+251-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:62:13-66:29
+251-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:62:28-50
+252                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+252-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:63:17-81
+252-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:63:25-78
+253
+254                <category android:name="com.example.giaohang" />
+254-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:65:17-61
+254-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:65:27-58
+255            </intent-filter>
+256        </receiver>
+257        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
+257-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:68:9-77
+257-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:68:19-74
+258
+259        <service
+259-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:70:9-76:19
+260            android:name="com.onesignal.HmsMessageServiceOneSignal"
+260-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:71:13-68
+261            android:exported="false" >
+261-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:72:13-37
+262            <intent-filter>
+262-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:73:13-75:29
+263                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+263-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:74:17-81
+263-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:74:25-78
+264            </intent-filter>
+265        </service>
+266
+267        <activity
+267-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:78:9-84:20
+268            android:name="com.onesignal.NotificationOpenedActivityHMS"
+268-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:79:13-71
+269            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+269-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:80:13-72
+270            <intent-filter>
+270-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:81:13-83:29
+271                <action android:name="android.intent.action.VIEW" />
+271-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:82:17-69
+271-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:82:25-66
+272            </intent-filter>
+273        </activity>
+274
+275        <service android:name="com.onesignal.GcmIntentService" />
+275-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:86:9-66
+275-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:86:18-63
+276        <service
+276-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:87:9-89:72
+277            android:name="com.onesignal.GcmIntentJobService"
+277-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:88:13-61
+278            android:permission="android.permission.BIND_JOB_SERVICE" />
+278-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:89:13-69
+279        <service
+279-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:90:9-92:72
+280            android:name="com.onesignal.RestoreJobService"
+280-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:91:13-59
+281            android:permission="android.permission.BIND_JOB_SERVICE" />
+281-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:92:13-69
+282        <service
+282-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:93:9-95:72
+283            android:name="com.onesignal.RestoreKickoffJobService"
+283-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:94:13-66
+284            android:permission="android.permission.BIND_JOB_SERVICE" />
+284-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:95:13-69
+285        <service
+285-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:96:9-98:43
+286            android:name="com.onesignal.SyncService"
+286-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:97:13-53
+287            android:stopWithTask="true" />
+287-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:98:13-40
+288        <service
+288-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:99:9-101:72
+289            android:name="com.onesignal.SyncJobService"
+289-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:100:13-56
+290            android:permission="android.permission.BIND_JOB_SERVICE" />
+290-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:101:13-69
+291
+292        <activity
+292-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:103:9-105:75
+293            android:name="com.onesignal.PermissionsActivity"
+293-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:104:13-61
+294            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+294-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:105:13-72
+295
+296        <service android:name="com.onesignal.NotificationRestoreService" />
+296-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:107:9-76
+296-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:107:18-73
+297
+298        <receiver android:name="com.onesignal.BootUpReceiver" >
+298-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:109:9-114:20
+298-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:109:19-62
+299            <intent-filter>
+299-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:110:13-113:29
+300                <action android:name="android.intent.action.BOOT_COMPLETED" />
+300-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:111:17-79
+300-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:111:25-76
+301                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+301-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:112:17-82
+301-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:112:25-79
+302            </intent-filter>
+303        </receiver>
+304        <receiver android:name="com.onesignal.UpgradeReceiver" >
+304-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:115:9-119:20
+304-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:115:19-63
+305            <intent-filter>
+305-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:116:13-118:29
+306                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+306-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:117:17-84
+306-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:117:25-81
+307            </intent-filter>
+308        </receiver>
+309
+310        <activity
+310-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:27:9-44:20
+311            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+311-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:28:13-80
+312            android:excludeFromRecents="true"
+312-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:29:13-46
+313            android:exported="true"
+313-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:30:13-36
+314            android:launchMode="singleTask"
+314-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:31:13-44
+315            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+315-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:32:13-72
+316            <intent-filter>
+316-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:33:13-43:29
+317                <action android:name="android.intent.action.VIEW" />
+317-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:82:17-69
+317-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:82:25-66
+318
+319                <category android:name="android.intent.category.DEFAULT" />
+319-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:17-76
+319-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:27-73
+320                <category android:name="android.intent.category.BROWSABLE" />
+320-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:37:17-78
+320-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:37:27-75
+321
+322                <data
+322-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:39:17-42:51
+323                    android:host="firebase.auth"
+323-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:40:21-49
+324                    android:path="/"
+324-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:41:21-37
+325                    android:scheme="genericidp" />
+325-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:42:21-48
+326            </intent-filter>
+327        </activity>
+328        <activity
+328-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:45:9-62:20
+329            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+329-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:46:13-79
+330            android:excludeFromRecents="true"
+330-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:47:13-46
+331            android:exported="true"
+331-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:48:13-36
+332            android:launchMode="singleTask"
+332-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:49:13-44
+333            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+333-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:50:13-72
+334            <intent-filter>
+334-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:51:13-61:29
+335                <action android:name="android.intent.action.VIEW" />
+335-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:82:17-69
+335-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:82:25-66
+336
+337                <category android:name="android.intent.category.DEFAULT" />
+337-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:17-76
+337-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:36:27-73
+338                <category android:name="android.intent.category.BROWSABLE" />
+338-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:37:17-78
+338-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:37:27-75
+339
+340                <data
+340-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:39:17-42:51
+341                    android:host="firebase.auth"
+341-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:40:21-49
+342                    android:path="/"
+342-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:41:21-37
+343                    android:scheme="recaptcha" />
+343-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\973d513d0e004e06344b1f3b88fb8891\jetified-firebase-auth-21.0.3\AndroidManifest.xml:42:21-48
+344            </intent-filter>
+345        </activity>
+346        <activity
+346-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:23:9-27:75
+347            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+347-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:24:13-93
+348            android:excludeFromRecents="true"
+348-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:25:13-46
+349            android:exported="false"
+349-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:26:13-37
+350            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+350-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:27:13-72
+351        <!--
+352            Service handling Google Sign-In user revocation. For apps that do not integrate with
+353            Google Sign-In, this service will never be started.
+354        -->
+355        <service
+355-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:33:9-37:51
+356            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+356-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:34:13-89
+357            android:exported="true"
+357-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:35:13-36
+358            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+358-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:36:13-107
+359            android:visibleToInstantApps="true" />
+359-->[com.google.android.gms:play-services-auth:19.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\722bdfd11a7a12e7bebab3febaf6acd0\jetified-play-services-auth-19.0.0\AndroidManifest.xml:37:13-48
+360
+361        <activity
+361-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:20:9-23:57
+362            android:name="com.rtchagas.pingplacepicker.ui.PlacePickerActivity"
+362-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:21:13-79
+363            android:launchMode="singleTop"
+363-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:22:13-43
+364            android:theme="@style/PingTheme.NoStatus" />
+364-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:23:13-54
+365
+366        <meta-data
+366-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:29:9-31:69
+367            android:name="com.google.android.gms.version"
+367-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:30:13-58
+368            android:value="@integer/google_play_services_version" />
+368-->[com.github.rtchagas:pingplacepicker:1.1.2] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\a20c3451e7999fbb276a91ae9640acb3\jetified-pingplacepicker-1.1.2\AndroidManifest.xml:31:13-66
+369
+370        <activity
+370-->[com.karumi:dexter:5.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\19f8943e571468067d295b838234b9e6\jetified-dexter-5.0.0\AndroidManifest.xml:27:9-29:72
+371            android:name="com.karumi.dexter.DexterActivity"
+371-->[com.karumi:dexter:5.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\19f8943e571468067d295b838234b9e6\jetified-dexter-5.0.0\AndroidManifest.xml:28:13-60
+372            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+372-->[com.karumi:dexter:5.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\19f8943e571468067d295b838234b9e6\jetified-dexter-5.0.0\AndroidManifest.xml:29:13-69
+373
+374        <provider
+374-->[com.squareup.picasso:picasso:2.71828] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\708cd0c6e75def4879471c6f4bbb8b0c\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+375            android:name="com.squareup.picasso.PicassoProvider"
+375-->[com.squareup.picasso:picasso:2.71828] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\708cd0c6e75def4879471c6f4bbb8b0c\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+376            android:authorities="com.example.giaohang.com.squareup.picasso"
+376-->[com.squareup.picasso:picasso:2.71828] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\708cd0c6e75def4879471c6f4bbb8b0c\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+377            android:exported="false" />
+377-->[com.squareup.picasso:picasso:2.71828] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\708cd0c6e75def4879471c6f4bbb8b0c\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+378
+379        <activity
+379-->[com.google.android.libraries.places:places:2.4.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\97e653070bffb44fcac46e88fe5db0da\jetified-places-2.4.0\AndroidManifest.xml:14:9-20:20
+380            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+380-->[com.google.android.libraries.places:places:2.4.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\97e653070bffb44fcac46e88fe5db0da\jetified-places-2.4.0\AndroidManifest.xml:15:13-91
+381            android:exported="false"
+381-->[com.google.android.libraries.places:places:2.4.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\97e653070bffb44fcac46e88fe5db0da\jetified-places-2.4.0\AndroidManifest.xml:16:13-37
+382            android:label="@string/places_autocomplete_label"
+382-->[com.google.android.libraries.places:places:2.4.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\97e653070bffb44fcac46e88fe5db0da\jetified-places-2.4.0\AndroidManifest.xml:17:13-62
+383            android:theme="@style/PlacesAutocompleteOverlay"
+383-->[com.google.android.libraries.places:places:2.4.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\97e653070bffb44fcac46e88fe5db0da\jetified-places-2.4.0\AndroidManifest.xml:18:13-61
+384            android:windowSoftInputMode="adjustResize" >
+384-->[com.google.android.libraries.places:places:2.4.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\97e653070bffb44fcac46e88fe5db0da\jetified-places-2.4.0\AndroidManifest.xml:19:13-55
+385        </activity>
+386
+387        <receiver
+387-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:31:9-38:20
+388            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+388-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:32:13-78
+389            android:exported="true"
+389-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:33:13-36
+390            android:permission="com.google.android.c2dm.permission.SEND" >
+390-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:34:13-73
+391            <intent-filter>
+391-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:35:13-37:29
+392                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+392-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:63:17-81
+392-->[com.onesignal:OneSignal:3.15.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\dd4d1affaf79ae271468ee12a3cd7278\jetified-OneSignal-3.15.4\AndroidManifest.xml:63:25-78
+393            </intent-filter>
+394        </receiver>
+395        <!--
+396             FirebaseMessagingService performs security checks at runtime,
+397             but set to not exported to explicitly avoid allowing another app to call it.
+398        -->
+399        <service
+399-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:44:9-51:19
+400            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+400-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:45:13-82
+401            android:directBootAware="true"
+401-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:46:13-43
+402            android:exported="false" >
+402-->[com.google.firebase:firebase-messaging:23.0.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\56dd9f45796cf9263de8537bdfebaaeb\jetified-firebase-messaging-23.0.4\AndroidManifest.xml:47:13-37
+403            <intent-filter android:priority="-500" >
+403-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:46:13-48:29
+404                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+404-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:47:17-78
+404-->C:\DATN\Giaohang_ban1\android\app\src\main\AndroidManifest.xml:47:25-75
+405            </intent-filter>
+406        </service> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+407        <activity
+407-->[com.google.android.gms:play-services-ads-lite:16.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5273990da3b64f015d799f1b09177de2\jetified-play-services-ads-lite-16.0.0\AndroidManifest.xml:29:9-33:64
+408            android:name="com.google.android.gms.ads.AdActivity"
+408-->[com.google.android.gms:play-services-ads-lite:16.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5273990da3b64f015d799f1b09177de2\jetified-play-services-ads-lite-16.0.0\AndroidManifest.xml:30:13-65
+409            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+409-->[com.google.android.gms:play-services-ads-lite:16.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5273990da3b64f015d799f1b09177de2\jetified-play-services-ads-lite-16.0.0\AndroidManifest.xml:31:13-122
+410            android:exported="false"
+410-->[com.google.android.gms:play-services-ads-lite:16.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5273990da3b64f015d799f1b09177de2\jetified-play-services-ads-lite-16.0.0\AndroidManifest.xml:32:13-37
+411            android:theme="@android:style/Theme.Translucent" />
+411-->[com.google.android.gms:play-services-ads-lite:16.0.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\5273990da3b64f015d799f1b09177de2\jetified-play-services-ads-lite-16.0.0\AndroidManifest.xml:33:13-61
+412        <activity
+412-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\065b87e6a767cdeae7e7e90ab21b6955\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+413            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+413-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\065b87e6a767cdeae7e7e90ab21b6955\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+414            android:exported="false"
+414-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\065b87e6a767cdeae7e7e90ab21b6955\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+415            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+415-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\065b87e6a767cdeae7e7e90ab21b6955\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+416
+417        <provider
+417-->[com.google.firebase:firebase-common:20.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\9ae8708fc8abd665145dcfed18978909\jetified-firebase-common-20.1.1\AndroidManifest.xml:26:9-31:39
+418            android:name="com.google.firebase.provider.FirebaseInitProvider"
+418-->[com.google.firebase:firebase-common:20.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\9ae8708fc8abd665145dcfed18978909\jetified-firebase-common-20.1.1\AndroidManifest.xml:27:13-77
+419            android:authorities="com.example.giaohang.firebaseinitprovider"
+419-->[com.google.firebase:firebase-common:20.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\9ae8708fc8abd665145dcfed18978909\jetified-firebase-common-20.1.1\AndroidManifest.xml:28:13-72
+420            android:directBootAware="true"
+420-->[com.google.firebase:firebase-common:20.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\9ae8708fc8abd665145dcfed18978909\jetified-firebase-common-20.1.1\AndroidManifest.xml:29:13-43
+421            android:exported="false"
+421-->[com.google.firebase:firebase-common:20.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\9ae8708fc8abd665145dcfed18978909\jetified-firebase-common-20.1.1\AndroidManifest.xml:30:13-37
+422            android:initOrder="100" />
+422-->[com.google.firebase:firebase-common:20.1.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\9ae8708fc8abd665145dcfed18978909\jetified-firebase-common-20.1.1\AndroidManifest.xml:31:13-36
+423        <provider
+423-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\cec2530ae5629e4b02b3462aa1a85aa3\jetified-lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:25:9-29:43
+424            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+424-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\cec2530ae5629e4b02b3462aa1a85aa3\jetified-lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:26:13-79
+425            android:authorities="com.example.giaohang.lifecycle-process"
+425-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\cec2530ae5629e4b02b3462aa1a85aa3\jetified-lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:27:13-69
+426            android:exported="false"
+426-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\cec2530ae5629e4b02b3462aa1a85aa3\jetified-lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:28:13-37
+427            android:multiprocess="true" />
+427-->[androidx.lifecycle:lifecycle-process:2.2.0-alpha02] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\cec2530ae5629e4b02b3462aa1a85aa3\jetified-lifecycle-process-2.2.0-alpha02\AndroidManifest.xml:29:13-40
+428
+429        <service
+429-->[com.google.android.datatransport:transport-backend-cct:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\4dd08cb3cf407cc3d219e3fdafca239d\jetified-transport-backend-cct-3.1.4\AndroidManifest.xml:29:9-35:19
+430            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+430-->[com.google.android.datatransport:transport-backend-cct:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\4dd08cb3cf407cc3d219e3fdafca239d\jetified-transport-backend-cct-3.1.4\AndroidManifest.xml:30:13-103
+431            android:exported="false" >
+431-->[com.google.android.datatransport:transport-backend-cct:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\4dd08cb3cf407cc3d219e3fdafca239d\jetified-transport-backend-cct-3.1.4\AndroidManifest.xml:31:13-37
+432            <meta-data
+432-->[com.google.android.datatransport:transport-backend-cct:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\4dd08cb3cf407cc3d219e3fdafca239d\jetified-transport-backend-cct-3.1.4\AndroidManifest.xml:32:13-34:39
+433                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+433-->[com.google.android.datatransport:transport-backend-cct:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\4dd08cb3cf407cc3d219e3fdafca239d\jetified-transport-backend-cct-3.1.4\AndroidManifest.xml:33:17-94
+434                android:value="cct" />
+434-->[com.google.android.datatransport:transport-backend-cct:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\4dd08cb3cf407cc3d219e3fdafca239d\jetified-transport-backend-cct-3.1.4\AndroidManifest.xml:34:17-36
+435        </service>
+436        <service
+436-->[com.google.android.datatransport:transport-runtime:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d8327e8cb81fe77ecec6da171c6c1979\jetified-transport-runtime-3.1.4\AndroidManifest.xml:26:9-30:19
+437            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+437-->[com.google.android.datatransport:transport-runtime:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d8327e8cb81fe77ecec6da171c6c1979\jetified-transport-runtime-3.1.4\AndroidManifest.xml:27:13-117
+438            android:exported="false"
+438-->[com.google.android.datatransport:transport-runtime:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d8327e8cb81fe77ecec6da171c6c1979\jetified-transport-runtime-3.1.4\AndroidManifest.xml:28:13-37
+439            android:permission="android.permission.BIND_JOB_SERVICE" >
+439-->[com.google.android.datatransport:transport-runtime:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d8327e8cb81fe77ecec6da171c6c1979\jetified-transport-runtime-3.1.4\AndroidManifest.xml:29:13-69
+440        </service>
+441
+442        <receiver
+442-->[com.google.android.datatransport:transport-runtime:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d8327e8cb81fe77ecec6da171c6c1979\jetified-transport-runtime-3.1.4\AndroidManifest.xml:32:9-34:40
+443            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+443-->[com.google.android.datatransport:transport-runtime:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d8327e8cb81fe77ecec6da171c6c1979\jetified-transport-runtime-3.1.4\AndroidManifest.xml:33:13-132
+444            android:exported="false" />
+444-->[com.google.android.datatransport:transport-runtime:3.1.4] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\d8327e8cb81fe77ecec6da171c6c1979\jetified-transport-runtime-3.1.4\AndroidManifest.xml:34:13-37
+445
+446        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+446-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:13:9-84
+446-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:13:19-81
+447        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+447-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:14:9-90
+447-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:14:19-87
+448        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+448-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:15:9-91
+448-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:15:19-88
+449        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+449-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:16:9-82
+449-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:16:19-79
+450        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+450-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:17:9-96
+450-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:17:19-93
+451        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+451-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:18:9-97
+451-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:18:19-94
+452        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+452-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:19:9-94
+452-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:19:19-91
+453        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+453-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:20:9-97
+453-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:20:19-94
+454        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+454-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:21:9-98
+454-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:21:19-95
+455
+456        <service
+456-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:23:9-25:40
+457            android:name="com.paypal.android.sdk.payments.PayPalService"
+457-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:24:13-73
+458            android:exported="false" />
+458-->[com.paypal.sdk:paypal-android-sdk:2.16.0] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\30c9d7522d5b8ba2b390019fa1d78ce7\jetified-paypal-android-sdk-2.16.0\AndroidManifest.xml:25:13-37
+459
+460        <activity
+460-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:20:9-22:66
+461            android:name="io.card.payment.CardIOActivity"
+461-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:21:13-58
+462            android:configChanges="keyboardHidden|orientation" />
+462-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:22:13-63
+463        <activity android:name="io.card.payment.DataEntryActivity" />
+463-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:23:9-70
+463-->[io.card:android-sdk:5.5.1] C:\Users\cuong.dv150480\Documents\caches\transforms-2\files-2.1\eff1914d8258712efd95492f85009243\jetified-android-sdk-5.5.1\AndroidManifest.xml:23:19-67
+464    </application>
+465
+466</manifest>
